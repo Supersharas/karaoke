@@ -1,0 +1,3 @@
+
+
+var lines = document.get

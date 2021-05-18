@@ -13,23 +13,23 @@
    margin: 0;
    min-height: 100vh;
 }
- a {
+.song div {
    position: relative;
    display: inline-block;
    font-size: 2em;
    font-weight: 800;
    color: royalblue;
    overflow: hidden;
-   background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+   background: linear-gradient(to right, midnightblue 50%, royalblue 50%);
    background-clip: text;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    background-size: 200% 100%;
    background-position: 100%;
-   transition: background-position 275ms ease;
    text-decoration: none;
 }
- a:hover {
+ .sung:hover {
+  transition: background-position 5000ms;
    background-position: 0 100%;
 }
  
