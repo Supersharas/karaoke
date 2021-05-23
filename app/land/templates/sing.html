@@ -1,10 +1,17 @@
 
+{% extends "base.html" %}
+
+{% block title %}sing{% endblock %}
+
+{% block head %}
 
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  {{super() }}
+  <link rel="stylesheet" href="{{ url_for('static', filename='sing.css') }}">
 </head>
+{% endblock %}
 
+{% block content %}
 <div id="concert">
   <h1>Karaoke</h1>
   <div id='song'>
@@ -16,5 +23,5 @@
   <h1>Mp3 Player</h1>
   <audio id='music' controls src="/OneRepublic - Counting Stars [Lyrics].mp3"></audio>
 </div>
-<a href="/compositor.html">compositor</a>
-<script type="text/javascript" src="sing.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='sing.js') }}"></script>
+{% endblock %}

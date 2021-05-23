@@ -1,0 +1,148 @@
+
+@font-face {
+  font-family: 'ultra';
+  src: url('/static/ultra.ttf')  format('truetype')
+}
+
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+}
+
+
+#cover {
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(255, 255, 255, 0.6);
+  z-index: 10;
+}
+
+.menuHolder {
+  position: fixed;
+  z-index: 302;
+  top: 8px;
+  left: 8px;
+}
+
+.menu {
+  transition: 0.3s;
+  display:inline-block;
+  top: 10px;
+  width: 2.2em;
+  height: 4.5px;
+  background: black;
+  box-shadow: 
+    0 9px 0 0 black,
+    0 18px 0 0 black;
+  margin-bottom: 2em;
+}
+
+.menuHolder:hover .menu {
+  
+  background: #fcc203;
+  box-shadow: 
+    0 0.6em 0 0 #fcc203,
+    0 1.2em 0 0 #fcc203;
+}
+
+.menuHolderOpen {
+  transition: 0.2s;
+  transition-delay: 0.1s;  
+  left: 4.6em;
+}
+
+
+#sideBar{
+  position: relative;
+  z-index: 300;
+  background: rgba(90, 127, 125);
+  
+}
+
+.slide {
+  transition: 0.3s;
+  z-index: 100;
+  position: fixed;
+  width: 4.5em;
+  font-size: 1.7em;
+  left: -4.5em;
+  top: 0px;
+  background: rgba(90, 127, 125);
+}
+
+.open {
+  left: 0;
+}
+
+.sideTop {
+  height: 2em;
+}
+
+.slide button {
+  font-family: inherit; /* 1 */
+  line-height: 1.15; /* 1 */
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0;
+  height: 1.2em;
+  width: 100%;
+  border: none;
+  background: rgba(90, 127, 125);
+}
+
+.slide button a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.slide button a:hover {
+  cursor: inherit;
+}
+
+.slide button:hover {
+  color: white;
+  background: rgba(90, 127, 165);
+}
+
+.slide button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+::selection {
+  background: rgba(90, 127, 145);
+}
+
+#page-container {
+  position: relative;
+  min-height: 96vh;
+  width: 100%;
+}
+
+#footer {
+  width: 100%;
+  height: 1em;
+  z-index: -1;
+}
+
+#copy small {
+  color: blue;
+  text-decoration: underline;
+  font-size: 1em;
+}
+
+#copy small:hover {
+  cursor: pointer;
+}
+

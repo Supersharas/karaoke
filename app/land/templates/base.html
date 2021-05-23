@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>{% block title %}{% endblock %} Hardware Quiz</title>
+  {% endblock %}
+</head>
+<body>
+  <div id="page-container">
+    <div id='cover'></div>
+      <div class='menuHolder' onclick="openSlide()">
+        <div class="menu"></div>
+      </div>
+      {% if manage %}
+
+      {% else %}
+      <div id='sideBar'>
+        <div class='slide'>
+          <div class='sideBut'>
+            <div class="sideTop"></div>
+            <button><a href="{{ url_for('compositor.home') }}">compositor</a></button>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    <div id="content">{% block content %}{% endblock %}</div>
+    
+    <script src="{{ url_for('static', filename='base.js') }}"></script>
+  </div>
+  <div id="footer">
+    {% block footer %}
+      <div id="copy">&copy; Copyright 2020 by <small onclick="contact()">singing dragon</small>.</div>
+    {% endblock %}
+  </div>
+</body>
+</html>

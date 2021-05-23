@@ -6,7 +6,7 @@ body {
 }
 
 #clock{
-  position: absolute;
+  position: fixed;
   font-size: 1.6em;
   left:50%;
   top: 2em;
@@ -60,7 +60,7 @@ body {
 }
 
 #mp3player{
-  position: absolute;
+  position: fixed;
   left: 50%;
   width: 10em;
   bottom: 2em;

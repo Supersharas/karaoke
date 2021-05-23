@@ -1,5 +1,5 @@
 
-
+'''
 from app import app
 
 from flask import url_for, jsonify, request, session, redirect
@@ -200,3 +200,5 @@ def add_question():
 		return json.dumps({'success': True, 'questionId': question_id})
 	else:
 		return render_template('add_question.html')
+
+'''
