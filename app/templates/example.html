@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+
+{% block title %}chess{% endblock %}
+{% block head %}
+<head>
+  {{ super() }}
+  <link rel="stylesheet" href="{{ url_for('static', filename='add_question.css') }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great Vibes">
+</head>
+{% endblock %}
+
+{% block content %}
+<div class='pop' id='success'>
+  Your question was uploaded successfuly!
+</div>
+<h2> Please Submmit a Question</h2>
+<div id='idea'>  
+  <label for="questionType"> Question Type</label>
+  <select name='questionType' id='questionType' onchange="changeType()">
+    <option value='question'>Question</option>
+    <option value="match">Find Match</option>
+    <option value="positional">Positional</option>
+  </select>
+  <label for="question"> Question </label>
+  <textarea id='question'></textarea>
+  <div id='pictureUrl'>
+    <label for='picUrl'>Picture Url</label>
+    <input id='picUrl' placeholder="Picture URL">
+  </div>
+  
+  <label for="answer"> Answer</label>
+  <textarea id='answer'></textarea>
+  <label for="score" id="scoreLabel">Correct Answer?</label>
+  <select id='score'>
+    <option value='true'>True</option>
+    <option value='false'>False</option>
+  </select>
+  <button id='addButton' onclick="addAnswer()">Add</button>
+  <div id="answerDisplay"></div>
+  <button onclick="submit()">Submit</button>
+</div>
+<script src="{{ url_for('static', filename='add_question.js') }}"></script>
+
+{% endblock %}

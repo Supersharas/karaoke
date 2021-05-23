@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css?family=Barlow:800&display=swap');
+
+body {
+  font-family: 'Barlow', sans-serif;
+}
+
+#clock{
+  position: absolute;
+  font-size: 1.6em;
+  left:50%;
+  top: 2em;
+  width:4.6em;
+  height: 1.5em;
+  background-color: pink;
+}
+
+#concert{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+#song{
+  display: inline-block;
+}
+
+.song {
+  position: relative;
+  font-size: 2em;
+  font-weight: 800;
+  color: royalblue;
+  overflow: hidden;
+  background: linear-gradient(to right, midnightblue 50%, red 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  text-decoration: none;
+}
+
+.line{
+  display: flex;
+  flex-wrap: wrap
+}
+
+.char{
+  font-size: 3em;
+  min-width: 1.5em;
+  min-height: 1.5em;
+  margin: 0.4em;
+  border: 1px solid seagreen;
+  text-align: center;
+}
+
+.clicked{
+  background-color: antiquewhite;
+}
+
+#mp3player{
+  position: absolute;
+  left: 50%;
+  width: 10em;
+  bottom: 2em;
+}
