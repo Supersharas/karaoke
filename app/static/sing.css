@@ -2,11 +2,7 @@
 
 body {
   font-family: 'Barlow', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  min-height: 100vh;
+
 }
 
 #concert{

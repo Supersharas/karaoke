@@ -9,10 +9,22 @@ body {
   position: fixed;
   font-size: 1.6em;
   left:50%;
+  margin-left: -2.3em;
   top: 2em;
   width:4.6em;
   height: 1.5em;
   background-color: pink;
+}
+
+#newSong {
+  display: none;
+  flex-wrap: wrap;
+  width: 20em;
+  margin: auto;
+}
+
+.songBit {
+  width: 100%;
 }
 
 #concert{
@@ -47,10 +59,8 @@ body {
 }
 
 .char{
-  font-size: 3em;
-  min-width: 1.5em;
-  min-height: 1.5em;
-  margin: 0.4em;
+  font-size: 2.3em;
+  min-width: 0.5em;
   border: 1px solid seagreen;
   text-align: center;
 }
@@ -61,7 +71,8 @@ body {
 
 #mp3player{
   position: fixed;
+  background-color: rgb(139, 168, 50, 0.6);
   left: 50%;
-  width: 10em;
+  margin-left: -8.7em;
   bottom: 2em;
 }

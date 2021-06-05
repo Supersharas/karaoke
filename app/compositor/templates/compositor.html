@@ -6,13 +6,22 @@
 </head>
 
 <h1>Ludwig van Beethoven</h1>
+<button onclick="openSong()">Create new song</button>
+<div id='newSong'>
+	<label class='songBit' for="name">Name</label>
+	<input class='songBit' type="text" name="name" id='name'>
+	<label class='songBit' for='audio'>Audio</label>
+	<input class='songBit' type="text" name="audio" id='audio'>
+	<label class='songBit' for='lyrics'>Lyrics</label>
+	<textarea class='songBit' name='lyrics' id='lyrics'></textarea>
+</div>
 
 <div id='concert'>
   <div id='clock'>0.000</div>
   <div id='workdesk'></div>
   <div id='mp3player'>
     <h1>Mp3 Player</h1>
-    <audio id='music' controls src="{{ url_for('static', filename='/OneRepublic - Counting Stars [Lyrics].mp3') }}"></audio>
+    <audio id='music' controls src="{{ url_for('static', filename='OneRepublic.mp3') }}"></audio>
   </div>
 </div>
 

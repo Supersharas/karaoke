@@ -3,6 +3,8 @@ var music = document.getElementById('music');
 music.playbackRate = 0.2;
 var clockInterval;
 
+var songOpen = false;
+
 // function singing(lineNo, segment){
 // 	// lines[lineNo].classList.add('sing');
 //   let line = lines[lineNo];
@@ -36,7 +38,25 @@ var conductor = [
 
 var text = [
   "Lately, I've been, I've been losing sleep",
-  "But baby, I've been, I've been praying hard"
+  "Dreaming about the things that we could be",
+  "But baby, I've been, I've been praying hard",
+  "Said no more counting dollars",
+  "We'll be counting stars",
+  "Yeah, we'll be counting stars",
+  "I see this life, like a swinging vine",
+  "Swing my heart across the line",
+  "And in my face is flashing signs",
+  "Seek it out and ye shall find",
+  "Old, but I'm not that old",
+  "Young, but I'm not that bold",
+  "And I don't think the world is sold",
+  "On just doing what we're told",
+  "I feel something so right",
+  "Doing the wrong thing",
+  "And I feel something so wrong",
+  "Doing the right thing",
+  "I couldn't lie, couldn't lie, couldn't lie",
+  "Everything that kills me makes me feel alive"
 ]
 
 function spell(char, line){
@@ -48,6 +68,7 @@ function spell(char, line){
     console.log(conductor);
   }
 }
+
 
 for(i=0;i<text.length;i++){
   let d = document.createElement('div');
@@ -73,3 +94,15 @@ music.onplay = function(){
   console.log('Playing');
   clockInterval = setInterval(clock, 100);
 }
+
+
+function openSong(){
+  if(songOpen){
+    document.getElementById('newSong').style.display = 'none';
+    songOpen = false;
+  } else{
+    document.getElementById('newSong').style.display = 'flex';
+    songOpen = true;
+  }
+}
+
