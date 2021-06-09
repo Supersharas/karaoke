@@ -106,3 +106,28 @@ function openSong(){
   }
 }
 
+function subSong(){
+  var name = document.getElementById('name').value;
+  var audio = document.getElementById('audio').value;
+  var lyrics = document.getElementById('lyrics').value;
+  console.log('song', name, audio, lyrics)
+  var msg ={'name': name, 'audio': audio, 'lyrics': lyrics }
+  fetchPost('/compositor/create', msg).then(function(res){
+    console.log('res', res);
+  })
+}
+
+function fetchPost(address, message){
+  return fetch(address,{
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: JSON.stringify(message)
+  }).then(response => response.json()).then(function(response){
+    return response;
+  }).catch(function(error){
+  	console.log(error);
+  })
+}

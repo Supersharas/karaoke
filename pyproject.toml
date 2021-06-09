@@ -11,4 +11,9 @@ version = "0.1.0"
 [tool.poetry.dependencies]
 flask = "^2.0.1"
 python = "^3.8"
+flask-sqlalchemy = "^2.5.1"
+sqlalchemy = "^1.4.17"
+alembic = "^1.6.5"
+flask-migrate = "^3.0.1"
+psycopg2-binary = "^2.8.6"
 [tool.poetry.dev-dependencies]

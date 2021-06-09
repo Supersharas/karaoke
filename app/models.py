@@ -36,6 +36,7 @@ def time_printer(tot_sec):
 class Song(db.Model):
   __tablename__ = 'songs'
   id = db.Column(db.Integer, primary_key=True)
+  name = db.Column(db.String())
   date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
   audio = db.Column(db.String())
   #score = db.Column(db.Float)

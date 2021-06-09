@@ -8,10 +8,10 @@ import json
 
 from app.models import db, Song
 
-def create():
+def create(name, audio, lyrics):
 	error = False
 	try:
-		song = Song()
+		song = Song(name=name, audio=audio, text=lyrics)
 		Song.insert(song)
 	except:
 		error = True
