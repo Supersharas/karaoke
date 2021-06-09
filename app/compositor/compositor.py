@@ -9,6 +9,7 @@ compositor = Blueprint('compositor', __name__,
 
 #from app.compositor.recorder import create
 from app.classes.tune import Tune
+from app.classes.tune_error import Tune_error
 
 @compositor.route('/')
 def home():
@@ -20,5 +21,8 @@ def new_song():
   name = content.get('name', None)
   audio = content.get('audio', None)
   lyrics = content.get('lyrics', None)
-  song = Tune(name, audio, lyrics)
+  try:
+    song = Tune(name, audio, lyrics)
+  except Tune_error as e:
+    return e.nice_error()
   return song.__str__()

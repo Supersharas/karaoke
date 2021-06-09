@@ -7,6 +7,7 @@ import sys
 import json
 
 from app.models import db, Song
+from app.classes.tune_error import Tune_error
 
 
 class Tune:
@@ -20,8 +21,8 @@ class Tune:
       try:
         song = Song(name=name, audio=audio, text=lyrics)
         Song.insert(song)
-      except:
-        self.error = sys.exc_info()       
+      except Exception as e:
+        raise Tune_error(' Initializing Object') from e       
     else:
       try:
         song = db.query.filter_by(id=args[0]).first() 
