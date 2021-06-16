@@ -6,8 +6,9 @@
 </head>
 
 <h1>Ludwig van Beethoven</h1>
-<button onclick="openSong()">Create new song</button>
-<div id='newSong'>
+<button onclick="disclose('newSong')">Create new song</button>
+<button onclick="disclose('editS')">edit song</button>
+<div class='pop' id='newSong'>
 	<label class='songBit' for="name">Name</label>
 	<input class='songBit' type="text" name="name" id='name'>
 	<label class='songBit' for='audio'>Audio</label>
@@ -16,6 +17,11 @@
 	<textarea class='songBit' name='lyrics' id='lyrics'></textarea>
   <button id='subSong' onclick='subSong()'>Submit</button>
 </div>
+<div class='pop' id='editS'>
+	<label class='songBit' for="songId">Id</label>
+	<input class='songBit' type="text" name="songId" id='songId'>
+  <button id='findSong' onclick='findSong()'>find Song</button>
+</div>
 
 <div id='concert'>
   <div id='clock'>0.000</div>
@@ -23,7 +29,10 @@
   <div id='mp3player'>
     <h1>Mp3 Player</h1>
     <audio id='music' controls src="{{ url_for('static', filename='OneRepublic.mp3') }}"></audio>
+    <button id='subComp' onclick='send()'>Send</button>
   </div>
 </div>
 
+
+<script> var tune = '{{tune}}'</script>
 <script type="text/javascript" src="{{ url_for('compositor.static', filename='compositor.js') }}"></script>

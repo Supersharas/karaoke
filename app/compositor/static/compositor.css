@@ -5,7 +5,7 @@ body {
   font-family: 'Barlow', sans-serif;
 }
 
-#clock{
+#clock {
   position: fixed;
   font-size: 1.6em;
   left:50%;
@@ -16,7 +16,7 @@ body {
   background-color: pink;
 }
 
-#newSong {
+#newSong, #editS {
   display: none;
   flex-wrap: wrap;
   width: 20em;
@@ -31,14 +31,19 @@ body {
   min-height: 20em;
 }
 
-#concert{
+#concert {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
 }
 
-#song{
+#workdesk {
+  padding-bottom: 12em;
+  padding-top: 5em;
+}
+
+#song {
   display: inline-block;
 }
 
@@ -57,9 +62,10 @@ body {
   text-decoration: none;
 }
 
-.line{
+.line {
   display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  padding-top: 1em;
 }
 
 .char{
