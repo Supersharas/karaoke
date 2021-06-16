@@ -9,23 +9,16 @@ compositor = Blueprint('compositor', __name__,
 		static_folder='static', static_url_path='/compositor')
 
 from app.classes.tune import Tune
-from app.classes.tune_error import Tune_error
+from app.classes.tune_error import Tune_error, Silent_error
+from app.classes.cache import Cache
 
-cache = False
-
-def check_cache():
-  if cache:
-    return cache
-
-def update_cache(tune):
-  global cache
-  current_app.logger.info('cache updated {}'.format(cache))
-  cache = tune
+cache = Cache()
 
 @compositor.route('/')
 def home():
-  if cache:
-    return render_template('compositor.html', tune=check_cache())
+  song = cache.get_compositor()
+  if song:
+    return render_template('compositor.html', tune=song)
   else:
     return render_template('compositor.html', tune='cache is empty')
 
@@ -37,9 +30,12 @@ def new_song():
   lyrics = content.get('lyrics', None)
   try:
     song = Tune(name, audio, lyrics)
+    cache.update_compositor(song)
+  except Silent_error as e:
+    current_app.logger.info(e.nice_error)
+    return song.__str__()
   except Tune_error as e:
     return e.nice_error()
-  update_cache(song)
   return song.__str__()
 
 @compositor.post('/get')
@@ -51,12 +47,19 @@ def get_song():
     try:
       song = Tune(song_id)
       song.conduct(conductor)
+      cache.update_compositor(song)
+    except Silent_error as e:
+      current_app.logger.info(e.nice_error)
+      return song.__str__()
     except Tune_error as e:
       return e.nice_error()
   else:
     try:
       song = Tune(song_id)
+      cache.update_compositor(song)
+    except Silent_error as e:
+      current_app.logger.info(e.nice_error)
+      return song.__str__()
     except Tune_error as e:
       return e.nice_error()
-  update_cache(song)
   return song.__str__()
