@@ -42,24 +42,27 @@ def new_song():
 def get_song():
   content = json.loads(request.data)
   song_id = content.get('id', None)
-  conductor = content.get('conductor', None)
-  if conductor:
-    try:
-      song = Tune(song_id)
-      song.conduct(conductor)
-      cache.update_compositor(song)
-    except Silent_error as e:
-      current_app.logger.info(e.nice_error)
-      return song.__str__()
-    except Tune_error as e:
-      return e.nice_error()
-  else:
-    try:
-      song = Tune(song_id)
-      cache.update_compositor(song)
-    except Silent_error as e:
-      current_app.logger.info(e.nice_error)
-      return song.__str__()
-    except Tune_error as e:
-      return e.nice_error()
+  try:
+    song = Tune(song_id)
+    cache.update_compositor(song)
+  except Silent_error as e:
+    current_app.logger.info(e.nice_error)
+    return song.__str__()
+  except Tune_error as e:
+    return e.nice_error()
   return song.__str__()
+
+@compositor.post('/conduct')
+def conduct():
+  content = json.loads(request.data)
+  song_id = content.get('id', None)
+  update = content.get('update', None)
+  if update:
+    try:
+      song = Tune(song_id)
+      song.conduct(update)
+      cache.update_compositor(song)
+    except Tune_error as e:
+      return e.nice_error()
+  return json.dumps({'update': update})
+  return json.dumps({'success': True})

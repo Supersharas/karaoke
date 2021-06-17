@@ -1,9 +1,4 @@
 
-from flask import current_app
-
-import datetime
-import random
-import sys
 import json
 
 from app.models import db, Song
@@ -20,7 +15,7 @@ class Tune:
       [name, audio, lyrics] = args
       try:
         song = Song(name=name, audio=audio, text=lyrics)
-        Song.insert(song)
+        song.insert()
       except Exception as e:
         db.session.close()
         raise Tune_error(' Initializing Object') from e       
@@ -50,12 +45,19 @@ class Tune:
 
   def conduct(self, notes):
     try:
-      song = db.query.filter_by(id=self.id).first()
-      song.conductor = notes
+      song = Song.query.filter_by(id=self.id).first()
+      song.conductor = notes.conductor
+      song.name = notes.name
+      song.audio = notes.audio
+      song.lyrics = notes.text 
+      song.update()
     except Exception as e:
       db.session.close()
       raise Tune_error('Database error while conducting.') from e
     finally:
-      self.conductor = notes
+      self.name = song.name
+      self.audio = song.audio
+      self.lyrics = song.text
+      self.conductor = song.conductor
       db.session.close()
-      return json.dumps({'success': True})
+      return json.dumps({'success': self.__str__()})

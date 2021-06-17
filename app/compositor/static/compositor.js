@@ -3,33 +3,43 @@ var music = document.getElementById('music');
 music.playbackRate = 0.2;
 var composing = false;
 var clockInterval;
-var text;
-var conductor = [];
-var tuneId;
-console.log(tune);
+var tune = {};
 
+window.onload = function(){
+  if(typeof song !== 'undefined'){
+    tune = song;
+    if(!tune.conductor){
+      tune.conductor = [];
+    }
+    console.log('preparing, song', song);
+    prepareWorkdesk(tune);
+  }
+}
 
 function clock(){
   document.getElementById('clock').innerText = music.currentTime;
 }
 
-
 function spell(char, line){
+  var text = tune.lyrics.split("\n")
   let pos = (100 * (char+1)) / text[line].length;
-  console.log('spell pos', char, line);
-  console.log('paused', music.paused)
-  conductor[line].push([pos, music.currentTime]);
+  if(typeof tune.conductor[line] == 'undefined'){
+    tune.conductor[line] = '';
+  }
+  tune.conductor[line] += '+' + ([pos.toFixed(2), music.currentTime.toFixed(2)]);
+  console.log(tune.conductor);
 }
 
-function prepareWorkdesk(lyrics){
-  text = lyrics.split("\n")
-  console.log('ltext', text);
+function prepareWorkdesk(tune){
+  var text = tune.lyrics.split("\n")
   for(i=0;i<text.length;i++){
     let d = document.createElement('div');
     d.id = `l${i}`;
     d.classList.add('line');
     document.getElementById('workdesk').append(d);
-    conductor.push([]);
+    // if(tune.conductor.length < i ){
+    //   tune.conductor.push('');
+    // }
     for(j=0;j<text[i].length;j++){
       let char = document.createElement('div');
       char.innerText = text[i][j];
@@ -46,18 +56,24 @@ function prepareWorkdesk(lyrics){
   }
 }
 
-function disclose(node){
-  var temp = document.getElementById(node);
-  var dis = getComputedStyle(temp).display;
-  var all = document.getElementsByClassName('pop')
-  for(i=0;i<all.length; i++){
-    if(getComputedStyle(all[i]).display){
-      all[i].style.display = 'none';
+document.addEventListener('keydown', startWork);
+
+function startWork(e) {
+  if(e.code == 'KeyW'){
+    if(composing){
+      composing = false;
+      music.pause();
+    } else{
+      composing = true;
+      music.play();
     }
   }
-  if(dis == 'none'){
-    temp.style.display = 'flex';
-  }
+}
+
+music.onplay = function(){
+  //singing(0, 0);
+  console.log('Playing');
+  clockInterval = setInterval(clock, 100);
 }
 
 function subSong(){
@@ -78,18 +94,23 @@ function findSong(){
   fetchPost('/compositor/get', msg).then(function(res){
     console.log('res', res);
     if(res.lyrics){
-      prepareWorkdesk(res.lyrics);
+      tune = res;
+      console.log('tune', tune);
+      // TO DO
+      //tune.conductor = [];
+      prepareWorkdesk(tune);
       document.getElementById('editS').style.display = 'none';
-      tuneId = res.id;
-      console.log('tune Id', tuneId)
     }   
   })
 }
 
 function send(){
-  let msg = {'id': tuneId, 'conductor': conductor};
+  if(typeof tune.conductor !== 'string'){
+    tune.conductor = tune.conductor.join('*');
+  }
+  let msg = {'id': tune.id, 'update': tune};
   console.log('msg', msg);
-  fetchPost('/compositor/get', msg).then(function(res){
+  fetchPost('/compositor/conduct', msg).then(function(res){
     console.log('res', res);
     if(res.cause){
       let txt = `args => ${res.args} \n couse => ${res.cause} \n traceback => ${res.traceback}`
@@ -113,25 +134,19 @@ function fetchPost(address, message){
   })
 }
 
-document.addEventListener('keydown', startWork);
 
-function startWork(e) {
-  if(e.code == 'KeyR'){
-    if(composing){
-      composing = false;
-      console.log('conductor', conductor);
-      music.pause();
-    } else{
-      composing = true;
-      music.play();
+function disclose(node){
+  var temp = document.getElementById(node);
+  var dis = getComputedStyle(temp).display;
+  var all = document.getElementsByClassName('pop')
+  for(i=0;i<all.length; i++){
+    if(getComputedStyle(all[i]).display){
+      all[i].style.display = 'none';
     }
   }
-}
-
-music.onplay = function(){
-  //singing(0, 0);
-  console.log('Playing');
-  clockInterval = setInterval(clock, 100);
+  if(dis == 'none'){
+    temp.style.display = 'flex';
+  }
 }
 
 // function singing(lineNo, segment){
