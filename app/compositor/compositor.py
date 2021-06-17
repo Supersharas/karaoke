@@ -30,7 +30,7 @@ def new_song():
   lyrics = content.get('lyrics', None)
   try:
     song = Tune(name, audio, lyrics)
-    cache.update_compositor(song)
+    cache.update_compositor(song.song)
   except Silent_error as e:
     current_app.logger.info(e.nice_error)
     return song.__str__()
@@ -44,6 +44,7 @@ def get_song():
   song_id = content.get('id', None)
   try:
     song = Tune(song_id)
+    current_app.logger.info(song.song)
     cache.update_compositor(song)
   except Silent_error as e:
     current_app.logger.info(e.nice_error)

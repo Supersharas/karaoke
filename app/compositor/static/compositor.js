@@ -27,7 +27,7 @@ function spell(char, line){
     tune.conductor[line] = '';
   }
   tune.conductor[line] += '+' + ([pos.toFixed(2), music.currentTime.toFixed(2)]);
-  console.log(tune.conductor);
+  //console.log(tune.conductor);
 }
 
 function prepareWorkdesk(tune){
@@ -108,6 +108,7 @@ function send(){
   if(typeof tune.conductor !== 'string'){
     tune.conductor = tune.conductor.join('*');
   }
+  tune.name = 'I dont cnow';
   let msg = {'id': tune.id, 'update': tune};
   console.log('msg', msg);
   fetchPost('/compositor/conduct', msg).then(function(res){

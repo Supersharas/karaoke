@@ -9,6 +9,8 @@ import os
 import json
 from datetime import datetime
 
+from flask import current_app
+
 
 def time_printer(tot_sec):
   hours = False
@@ -52,6 +54,7 @@ class Song(db.Model):
     db.session.commit()
   
   def update(self):
+    current_app.logger.info('updating')
     db.session.commit()
 
   def delete(self):
