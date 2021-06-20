@@ -12,16 +12,24 @@
 {% endblock %}
 
 {% block content %}
+
+<aside id='popular'>
+  <div id="asidePopular">popular</div>
+  {% for song in popular %}
+    <div class='asideSong' onclick=sing(this) id='{{song.id}}'> {{song.name}}</div>
+  {% endfor %}
+</aside>
+
 <div id="concert">
   <h1>Karaoke</h1>
-  <div id='song'>
-    <div class="song"></div>
-    <div class="song">Lately, I've been, I've been losing sleep</div>
-    <div class="song">Dreaming about the things that we could be</div>
-  </div>
+  <div id='tune'></div>
 
   <h1>Mp3 Player</h1>
   <audio id='music' controls src="/OneRepublic - Counting Stars [Lyrics].mp3"></audio>
 </div>
 <script type="text/javascript" src="{{ url_for('static', filename='sing.js') }}"></script>
+{% endblock %}
+
+{% block footer %}
+  cashed: {{cached}} size: {{size}} time: {{ex_time}}
 {% endblock %}

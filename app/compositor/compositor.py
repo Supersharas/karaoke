@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, url_for, jsonify, request, session, redirect
 
 from flask import current_app
+from app.models import db
 
 import json 
 
@@ -48,9 +49,12 @@ def get_song():
     cache.update_compositor(song)
   except Silent_error as e:
     current_app.logger.info(e.nice_error)
+    db.session.close()
     return song.__str__()
   except Tune_error as e:
+    db.session.close()
     return e.nice_error()
+  db.session.close()
   return song.__str__()
 
 @compositor.post('/conduct')
@@ -63,7 +67,9 @@ def conduct():
       song = Tune(song_id)
       song.conduct(update)
       cache.update_compositor(song)
+      db.session.close()
     except Tune_error as e:
+      db.session.close()
       return e.nice_error()
   return json.dumps({'update': update})
   return json.dumps({'success': True})

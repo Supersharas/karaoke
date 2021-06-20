@@ -64,6 +64,7 @@ class Song(db.Model):
   def format(self):
     return {
       'id': self.id,
+      'name': self.name,
       'date': str(self.date.date()),
       'audio': self.audio,
       'text': self.text,
