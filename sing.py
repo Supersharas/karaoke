@@ -19,3 +19,7 @@ flask run --host=0.0.0.0 --port=8080
 
 #astrosiloknight@zohomail.eu dsgb269-ft
 #astrosiloknight
+
+#git remote -v
+#ssh -T git@github.com
+#git remote set-url origin git@github.com:/Supersharas/karaoke.git
