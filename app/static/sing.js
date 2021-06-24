@@ -9,11 +9,19 @@ function sing(e){
       console.log('res', res);
       tune = res;
       let cons = tune.conductor.split('*');
-      tune.conductor = []
+      tune.conductor = [];
+      var x = 0;
+      var temp_list = [];
       cons.forEach(function(e){
-        if(e != ''){
-          tune.conductor.push(e.split('+'));
-        }     
+        let line = e.split('+');
+        line.forEach(function(f){
+          if(f != ''){
+            temp_list.push(f.split(','));
+          }   
+        })
+        tune.conductor.push(temp_list);
+        temp_list = []
+        x++;     
       })
       console.log('tuneconductor', tune.conductor);
       prepareWorkdesk(tune);
@@ -38,11 +46,13 @@ function singing(lineNo, segment){
   let line = document.getElementById(`l${lineNo}`);
   console.log(`l${lineNo}`, line);
   if(segment > 0){
-    var duration = tune.conductor[lineNo][segment][1] - tune.conductor[lineNo][segment - 1][1] * 1000;
+    var duration = (tune.conductor[lineNo][segment][1] - tune.conductor[lineNo][segment - 1][1]) * 1000;
+    console.log('tune.conductor[lineNo][segment]', tune.conductor[lineNo][segment][1], tune.conductor[lineNo][segment])
   } else{
     let duration = 0;
   }
   let segNo = tune.conductor[lineNo].length;
+  console.log('segNo', segNo);
   // let computed = window.getComputedStyle(line)
   line.style.transition = `background-position ${duration}ms linear`;
   backPos = 100 - tune.conductor[lineNo][segment][0];

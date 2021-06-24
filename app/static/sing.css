@@ -8,7 +8,7 @@ body {
 #popular {
   position: fixed;
   left: 0;
-  height: 100%;
+  height: 90%;
   margin-top: 2em;
   width: 8em; 
   overflow-y: scroll;
@@ -47,7 +47,7 @@ body {
   display: inline-block;
 }
 
-.song {
+.line {
   position: relative;
   font-size: 2em;
   font-weight: 800;
