@@ -3,7 +3,7 @@ from flask import Blueprint, render_template, url_for, jsonify, request, session
 from flask import current_app
 from app.models import db
 
-import json 
+import json
 
 compositor = Blueprint('compositor', __name__,
 		template_folder='templates',
@@ -12,12 +12,16 @@ compositor = Blueprint('compositor', __name__,
 from app.classes.tune import Tune
 from app.classes.tune_error import Tune_error, Silent_error
 from app.classes.cache import Cache
+from app.classes.loger import Tune_log
 
+tune_log = Tune_log('compositor')
 cache = Cache()
+tune_log.log('here we go')
 
 @compositor.route('/')
 def home():
   song = cache.get_compositor()
+  tune_log.log('opening compositor')
   if song:
     return render_template('compositor.html', tune=song)
   else:
@@ -62,6 +66,7 @@ def conduct():
   content = json.loads(request.data)
   song_id = content.get('id', None)
   update = content.get('update', None)
+  tune_log.log('conducting {} {}'.format(song_id, update) )
   if update:
     try:
       song = Tune(song_id)

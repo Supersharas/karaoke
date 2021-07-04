@@ -3,7 +3,9 @@ import json
 
 from app.models import db, Song
 from app.classes.tune_error import Tune_error
+from app.classes.loger import Tune_log
 
+tune_log = Tune_log('Tune')
 
 class Tune:
 
@@ -46,4 +48,5 @@ class Tune:
       self.song.update()
     except Exception as e:
       raise Tune_error('Database error while conducting.') from e
+    tune_log.log('conducted {}'.format(notes['conductor']))
     return json.dumps({'success': self.__str__()})

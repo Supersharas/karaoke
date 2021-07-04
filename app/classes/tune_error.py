@@ -2,7 +2,6 @@
 import json
 import traceback
 
-
 class Tune_error(Exception):
 	def nice_error(self):
 		return json.dumps({'args':self.args, 'context': str(self.__context__), 'cause': str(self.__cause__),
