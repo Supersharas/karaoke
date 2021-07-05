@@ -10,6 +10,8 @@ window.onload = function(){
     tune = song;
     if(!tune.conductor){
       tune.conductor = [];
+    } else{
+      tune.conductor = tune.conductor.split('*');
     }
     console.log('preparing, song', song);
     prepareWorkdesk(tune);
@@ -26,20 +28,23 @@ function spell(char, line){
   if(typeof tune.conductor[line] == 'undefined'){
     tune.conductor[line] = '';
   }
+  console.log(line);
+  console.log('line', tune.conductor[line]);
+  console.log(typeof tune.conductor[line]);
   tune.conductor[line] += '+' + ([pos.toFixed(2), music.currentTime.toFixed(2)]);
-  //console.log(tune.conductor);
+  console.log(tune.conductor);
 }
 
 function prepareWorkdesk(tune){
+  //document.getElementById('workdesk').innerText = '';
+  let composed = tune.conductor.length;
   var text = tune.lyrics.split("\n")
   for(i=0;i<text.length;i++){
     let d = document.createElement('div');
     d.id = `l${i}`;
     d.classList.add('line');
     document.getElementById('workdesk').append(d);
-    // if(tune.conductor.length < i ){
-    //   tune.conductor.push('');
-    // }
+    console.log('i < composed', i, composed);
     for(j=0;j<text[i].length;j++){
       let char = document.createElement('div');
       char.innerText = text[i][j];
@@ -53,7 +58,21 @@ function prepareWorkdesk(tune){
       }
       d.append(char);
     }
+    if(i < composed){
+      d.classList.add('composed');
+      let b = document.createElement('button');
+      b.innerText = 'del';
+      b.onclick = deleteLine(i);
+      d.append(b);
+      d.classList.add('clicked');
+    }
   }
+}
+
+function deleteLine(n){
+  console.log('working');
+  tune.conductor[n] = '';
+  //prepareWorkdesk(tune);
 }
 
 document.addEventListener('keydown', startWork);

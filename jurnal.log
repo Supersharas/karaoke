@@ -64,3 +64,360 @@
 2021-07-04 10:41:15,371 172.18.0.1 - - [04/Jul/2021 10:41:15] "[33mGET /OneRepublic%20-%20Counting%20Stars%20[Lyrics].mp3 HTTP/1.1[0m" 404 -
 2021-07-04 10:41:18,021 172.18.0.1 - - [04/Jul/2021 10:41:18] "POST /get_song HTTP/1.1" 200 -
 2021-07-04 10:44:34,522 172.18.0.1 - - [04/Jul/2021 10:44:34] "[33mGET /OneRepublic%20-%20Counting%20Stars%20[Lyrics].mp3 HTTP/1.1[0m" 404 -
+2021-07-05 10:08:37,475 ===================> compositor =>> here we go 
+2021-07-05 10:08:37,528  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-07-05 10:08:37,528  * Running on http://172.18.0.12:8080/ (Press CTRL+C to quit)
+2021-07-05 10:08:41,477 172.18.0.1 - - [05/Jul/2021 10:08:41] "GET / HTTP/1.1" 200 -
+2021-07-05 10:08:41,677 172.18.0.1 - - [05/Jul/2021 10:08:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2021-07-05 10:08:41,678 172.18.0.1 - - [05/Jul/2021 10:08:41] "[36mGET /static/sing.css HTTP/1.1[0m" 304 -
+2021-07-05 10:08:41,843 172.18.0.1 - - [05/Jul/2021 10:08:41] "[36mGET /static/sing.js HTTP/1.1[0m" 304 -
+2021-07-05 10:08:41,854 172.18.0.1 - - [05/Jul/2021 10:08:41] "[36mGET /static/base.js HTTP/1.1[0m" 304 -
+2021-07-05 10:34:12,851 172.18.0.1 - - [05/Jul/2021 10:34:12] "[33mGET /OneRepublic%20-%20Counting%20Stars%20[Lyrics].mp3 HTTP/1.1[0m" 404 -
+2021-07-05 10:34:20,360 172.18.0.1 - - [05/Jul/2021 10:34:20] "GET / HTTP/1.1" 200 -
+2021-07-05 10:34:20,548 172.18.0.1 - - [05/Jul/2021 10:34:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2021-07-05 10:34:20,560 172.18.0.1 - - [05/Jul/2021 10:34:20] "[36mGET /static/base.js HTTP/1.1[0m" 304 -
+2021-07-05 10:34:20,568 172.18.0.1 - - [05/Jul/2021 10:34:20] "[36mGET /static/sing.js HTTP/1.1[0m" 304 -
+2021-07-05 10:34:20,582 172.18.0.1 - - [05/Jul/2021 10:34:20] "[33mGET /OneRepublic%20-%20Counting%20Stars%20[Lyrics].mp3 HTTP/1.1[0m" 404 -
+2021-07-05 10:34:20,638 172.18.0.1 - - [05/Jul/2021 10:34:20] "[36mGET /static/sing.css HTTP/1.1[0m" 304 -
+2021-07-05 10:34:21,340 172.18.0.1 - - [05/Jul/2021 10:34:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 10:34:24,868 ===================> compositor =>> opening compositor 
+2021-07-05 10:34:24,876 172.18.0.1 - - [05/Jul/2021 10:34:24] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 10:34:25,050 172.18.0.1 - - [05/Jul/2021 10:34:25] "[36mGET /compositor/compositor/compositor.js HTTP/1.1[0m" 304 -
+2021-07-05 10:34:25,054 172.18.0.1 - - [05/Jul/2021 10:34:25] "[36mGET /compositor/compositor/compositor.css HTTP/1.1[0m" 304 -
+2021-07-05 10:34:25,054 172.18.0.1 - - [05/Jul/2021 10:34:25] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 10:34:37,261 172.18.0.1 - - [05/Jul/2021 10:34:37] "POST /compositor/get HTTP/1.1" 200 -
+2021-07-05 10:34:42,369 172.18.0.1 - - [05/Jul/2021 10:34:42] "[36mGET /compositor/compositor/compositor.css HTTP/1.1[0m" 304 -
+2021-07-05 10:34:47,769 172.18.0.1 - - [05/Jul/2021 10:34:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 10:34:47,853 172.18.0.1 - - [05/Jul/2021 10:34:47] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 10:34:48,001 172.18.0.1 - - [05/Jul/2021 10:34:48] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 10:36:02,238 ===================> compositor =>> conducting 18 {'id': 18, 'name': 'I dont cnow', 'audio': 'sddlkjkljk', 'lyrics': "Lately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\nYeah, we'll be counting stars\n\nI see this life, like a swinging vine\nSwing my heart across the line\nAnd in my face is flashing signs\nSeek it out and ye' shall find\n\nOld, but I'm not that old\nYoung, but I'm not that bold\nAnd I don't think the world is sold\nI'm just doing what we're told\n\nI feel something so right\nDoing the wrong thing\nAnd I feel something so wrong\nDoing the right thing\nI couldn't lie, couldn't lie, couldn't lie\nEverything that kills me makes me feel alive\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\n\nLately, I've been, I've been losing sleep\nDreaming about the things we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be, we'll be counting stars\nYeah\n\nI feel your love and I feel it burn\nDown this river, every turn\nHope is our four-letter word\nMake that money, watch it burn\n\nOld, but I'm not that old\nYoung, but I'm not that bold\nAnd I don't think the world is sold\nI'm just doing what we're told\n\nAnd I feel something so wrong\nDoing the right thing\nI couldn't lie, couldn't lie, couldn't lie\nEverything that drowns me makes me wanna fly\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be, we'll be counting stars\n\nOh, take that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nEverything that kills me\nMakes me feel alive\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be, we'll be counting stars\n\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned", 'conductor': '+2.44,0.49+4.88,0.49+7.32,0.50+9.76,0.50+12.20,0.50+14.63,0.51+17.07,0.52+19.51,0.52+21.95,0.53+24.39,0.53+26.83,0.54+29.27,0.54+31.71,0.54+34.15,0.55+36.59,0.55+39.02,0.55+41.46,0.56+43.90,0.57+46.34,0.57+48.78,0.58+51.22,0.59+53.66,0.60+56.10,0.61+58.54,0.61+60.98,0.62+63.41,0.63+65.85,0.65+68.29,0.66+70.73,0.67+73.17,0.68+75.61,0.70+78.05,0.71+80.49,0.72+82.93,0.73+85.37,0.75+87.80,0.75+90.24,0.76+92.68,0.77+95.12,0.78+97.56,0.80+100.00,0.81*+2.38,0.96+4.76,0.97+7.14,0.99+9.52,1.01+11.90,1.02+14.29,1.02+16.67,1.03+19.05,1.05+21.43,1.06+23.81,1.07+26.19,1.09+28.57,1.10+30.95,1.11+33.33,1.12+35.71,1.13+38.10,1.14+40.48,1.16+42.86,1.17+45.24,1.18+47.62,1.19+50.00,1.21+52.38,1.22+54.76,1.22+57.14,1.22+59.52,1.23+61.90,1.23+64.29,1.24+66.67,1.25+69.05,1.25+71.43,1.27+73.81,1.27+76.19,1.29+78.57,1.31+80.95,1.32+83.33,1.33+85.71,1.35+88.10,1.38+90.48,1.39+92.86,1.43+95.24,1.45+97.62,1.49+100.00,1.53'} 
+2021-07-05 10:36:02,542 ===================> Tune =>> conducted +2.44,0.49+4.88,0.49+7.32,0.50+9.76,0.50+12.20,0.50+14.63,0.51+17.07,0.52+19.51,0.52+21.95,0.53+24.39,0.53+26.83,0.54+29.27,0.54+31.71,0.54+34.15,0.55+36.59,0.55+39.02,0.55+41.46,0.56+43.90,0.57+46.34,0.57+48.78,0.58+51.22,0.59+53.66,0.60+56.10,0.61+58.54,0.61+60.98,0.62+63.41,0.63+65.85,0.65+68.29,0.66+70.73,0.67+73.17,0.68+75.61,0.70+78.05,0.71+80.49,0.72+82.93,0.73+85.37,0.75+87.80,0.75+90.24,0.76+92.68,0.77+95.12,0.78+97.56,0.80+100.00,0.81*+2.38,0.96+4.76,0.97+7.14,0.99+9.52,1.01+11.90,1.02+14.29,1.02+16.67,1.03+19.05,1.05+21.43,1.06+23.81,1.07+26.19,1.09+28.57,1.10+30.95,1.11+33.33,1.12+35.71,1.13+38.10,1.14+40.48,1.16+42.86,1.17+45.24,1.18+47.62,1.19+50.00,1.21+52.38,1.22+54.76,1.22+57.14,1.22+59.52,1.23+61.90,1.23+64.29,1.24+66.67,1.25+69.05,1.25+71.43,1.27+73.81,1.27+76.19,1.29+78.57,1.31+80.95,1.32+83.33,1.33+85.71,1.35+88.10,1.38+90.48,1.39+92.86,1.43+95.24,1.45+97.62,1.49+100.00,1.53 
+2021-07-05 10:36:02,838 172.18.0.1 - - [05/Jul/2021 10:36:02] "POST /compositor/conduct HTTP/1.1" 200 -
+2021-07-05 10:41:03,106 ===================> compositor =>> opening compositor 
+2021-07-05 10:41:03,108 172.18.0.1 - - [05/Jul/2021 10:41:03] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 10:41:03,361 172.18.0.1 - - [05/Jul/2021 10:41:03] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 10:41:03,362 172.18.0.1 - - [05/Jul/2021 10:41:03] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 10:41:03,367 172.18.0.1 - - [05/Jul/2021 10:41:03] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 10:41:04,197 172.18.0.1 - - [05/Jul/2021 10:41:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 10:41:08,386 172.18.0.1 - - [05/Jul/2021 10:41:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 10:41:08,423 172.18.0.1 - - [05/Jul/2021 10:41:08] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 10:41:08,579 172.18.0.1 - - [05/Jul/2021 10:41:08] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 10:41:22,250 ===================> compositor =>> opening compositor 
+2021-07-05 10:41:22,253 172.18.0.1 - - [05/Jul/2021 10:41:22] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 10:41:22,439 172.18.0.1 - - [05/Jul/2021 10:41:22] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 10:41:22,444 172.18.0.1 - - [05/Jul/2021 10:41:22] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 10:41:22,848 172.18.0.1 - - [05/Jul/2021 10:41:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 10:41:24,938 172.18.0.1 - - [05/Jul/2021 10:41:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 10:41:42,513 ===================> compositor =>> conducting 18 {'id': 18, 'name': 'I dont cnow', 'audio': 'sddlkjkljk', 'lyrics': "Lately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\nYeah, we'll be counting stars\n\nI see this life, like a swinging vine\nSwing my heart across the line\nAnd in my face is flashing signs\nSeek it out and ye' shall find\n\nOld, but I'm not that old\nYoung, but I'm not that bold\nAnd I don't think the world is sold\nI'm just doing what we're told\n\nI feel something so right\nDoing the wrong thing\nAnd I feel something so wrong\nDoing the right thing\nI couldn't lie, couldn't lie, couldn't lie\nEverything that kills me makes me feel alive\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\n\nLately, I've been, I've been losing sleep\nDreaming about the things we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be, we'll be counting stars\nYeah\n\nI feel your love and I feel it burn\nDown this river, every turn\nHope is our four-letter word\nMake that money, watch it burn\n\nOld, but I'm not that old\nYoung, but I'm not that bold\nAnd I don't think the world is sold\nI'm just doing what we're told\n\nAnd I feel something so wrong\nDoing the right thing\nI couldn't lie, couldn't lie, couldn't lie\nEverything that drowns me makes me wanna fly\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be, we'll be counting stars\n\nOh, take that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nEverything that kills me\nMakes me feel alive\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be, we'll be counting stars\n\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned", 'conductor': '+2.44,0.49+4.88,0.49+7.32,0.50+9.76,0.50+12.20,0.50+14.63,0.51+17.07,0.52+19.51,0.52+21.95,0.53+24.39,0.53+26.83,0.54+29.27,0.54+31.71,0.54+34.15,0.55+36.59,0.55+39.02,0.55+41.46,0.56+43.90,0.57+46.34,0.57+48.78,0.58+51.22,0.59+53.66,0.60+56.10,0.61+58.54,0.61+60.98,0.62+63.41,0.63+65.85,0.65+68.29,0.66+70.73,0.67+73.17,0.68+75.61,0.70+78.05,0.71+80.49,0.72+82.93,0.73+85.37,0.75+87.80,0.75+90.24,0.76+92.68,0.77+95.12,0.78+97.56,0.80+100.00,0.81*+2.38,0.96+4.76,0.97+7.14,0.99+9.52,1.01+11.90,1.02+14.29,1.02+16.67,1.03+19.05,1.05+21.43,1.06+23.81,1.07+26.19,1.09+28.57,1.10+30.95,1.11+33.33,1.12+35.71,1.13+38.10,1.14+40.48,1.16+42.86,1.17+45.24,1.18+47.62,1.19+50.00,1.21+52.38,1.22+54.76,1.22+57.14,1.22+59.52,1.23+61.90,1.23+64.29,1.24+66.67,1.25+69.05,1.25+71.43,1.27+73.81,1.27+76.19,1.29+78.57,1.31+80.95,1.32+83.33,1.33+85.71,1.35+88.10,1.38+90.48,1.39+92.86,1.43+95.24,1.45+97.62,1.49+100.00,1.53'} 
+2021-07-05 10:41:42,816 ===================> Tune =>> conducted +2.44,0.49+4.88,0.49+7.32,0.50+9.76,0.50+12.20,0.50+14.63,0.51+17.07,0.52+19.51,0.52+21.95,0.53+24.39,0.53+26.83,0.54+29.27,0.54+31.71,0.54+34.15,0.55+36.59,0.55+39.02,0.55+41.46,0.56+43.90,0.57+46.34,0.57+48.78,0.58+51.22,0.59+53.66,0.60+56.10,0.61+58.54,0.61+60.98,0.62+63.41,0.63+65.85,0.65+68.29,0.66+70.73,0.67+73.17,0.68+75.61,0.70+78.05,0.71+80.49,0.72+82.93,0.73+85.37,0.75+87.80,0.75+90.24,0.76+92.68,0.77+95.12,0.78+97.56,0.80+100.00,0.81*+2.38,0.96+4.76,0.97+7.14,0.99+9.52,1.01+11.90,1.02+14.29,1.02+16.67,1.03+19.05,1.05+21.43,1.06+23.81,1.07+26.19,1.09+28.57,1.10+30.95,1.11+33.33,1.12+35.71,1.13+38.10,1.14+40.48,1.16+42.86,1.17+45.24,1.18+47.62,1.19+50.00,1.21+52.38,1.22+54.76,1.22+57.14,1.22+59.52,1.23+61.90,1.23+64.29,1.24+66.67,1.25+69.05,1.25+71.43,1.27+73.81,1.27+76.19,1.29+78.57,1.31+80.95,1.32+83.33,1.33+85.71,1.35+88.10,1.38+90.48,1.39+92.86,1.43+95.24,1.45+97.62,1.49+100.00,1.53 
+2021-07-05 10:41:43,105 172.18.0.1 - - [05/Jul/2021 10:41:43] "POST /compositor/conduct HTTP/1.1" 200 -
+2021-07-05 10:42:14,673 ===================> compositor =>> opening compositor 
+2021-07-05 10:42:14,679 172.18.0.1 - - [05/Jul/2021 10:42:14] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 10:42:14,861 172.18.0.1 - - [05/Jul/2021 10:42:14] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 10:42:14,866 172.18.0.1 - - [05/Jul/2021 10:42:14] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 10:42:15,253 172.18.0.1 - - [05/Jul/2021 10:42:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 10:42:20,210 172.18.0.1 - - [05/Jul/2021 10:42:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 10:42:35,828 ===================> compositor =>> conducting 18 {'id': 18, 'name': 'I dont cnow', 'audio': 'sddlkjkljk', 'lyrics': "Lately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\nYeah, we'll be counting stars\n\nI see this life, like a swinging vine\nSwing my heart across the line\nAnd in my face is flashing signs\nSeek it out and ye' shall find\n\nOld, but I'm not that old\nYoung, but I'm not that bold\nAnd I don't think the world is sold\nI'm just doing what we're told\n\nI feel something so right\nDoing the wrong thing\nAnd I feel something so wrong\nDoing the right thing\nI couldn't lie, couldn't lie, couldn't lie\nEverything that kills me makes me feel alive\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\n\nLately, I've been, I've been losing sleep\nDreaming about the things we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be, we'll be counting stars\nYeah\n\nI feel your love and I feel it burn\nDown this river, every turn\nHope is our four-letter word\nMake that money, watch it burn\n\nOld, but I'm not that old\nYoung, but I'm not that bold\nAnd I don't think the world is sold\nI'm just doing what we're told\n\nAnd I feel something so wrong\nDoing the right thing\nI couldn't lie, couldn't lie, couldn't lie\nEverything that drowns me makes me wanna fly\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be, we'll be counting stars\n\nOh, take that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nEverything that kills me\nMakes me feel alive\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be, we'll be counting stars\n\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned", 'conductor': '+2.44,0.49+4.88,0.49+7.32,0.50+9.76,0.50+12.20,0.50+14.63,0.51+17.07,0.52+19.51,0.52+21.95,0.53+24.39,0.53+26.83,0.54+29.27,0.54+31.71,0.54+34.15,0.55+36.59,0.55+39.02,0.55+41.46,0.56+43.90,0.57+46.34,0.57+48.78,0.58+51.22,0.59+53.66,0.60+56.10,0.61+58.54,0.61+60.98,0.62+63.41,0.63+65.85,0.65+68.29,0.66+70.73,0.67+73.17,0.68+75.61,0.70+78.05,0.71+80.49,0.72+82.93,0.73+85.37,0.75+87.80,0.75+90.24,0.76+92.68,0.77+95.12,0.78+97.56,0.80+100.00,0.81*+2.38,0.96+4.76,0.97+7.14,0.99+9.52,1.01+11.90,1.02+14.29,1.02+16.67,1.03+19.05,1.05+21.43,1.06+23.81,1.07+26.19,1.09+28.57,1.10+30.95,1.11+33.33,1.12+35.71,1.13+38.10,1.14+40.48,1.16+42.86,1.17+45.24,1.18+47.62,1.19+50.00,1.21+52.38,1.22+54.76,1.22+57.14,1.22+59.52,1.23+61.90,1.23+64.29,1.24+66.67,1.25+69.05,1.25+71.43,1.27+73.81,1.27+76.19,1.29+78.57,1.31+80.95,1.32+83.33,1.33+85.71,1.35+88.10,1.38+90.48,1.39+92.86,1.43+95.24,1.45+97.62,1.49+100.00,1.53'} 
+2021-07-05 10:42:36,148 ===================> Tune =>> conducted +2.44,0.49+4.88,0.49+7.32,0.50+9.76,0.50+12.20,0.50+14.63,0.51+17.07,0.52+19.51,0.52+21.95,0.53+24.39,0.53+26.83,0.54+29.27,0.54+31.71,0.54+34.15,0.55+36.59,0.55+39.02,0.55+41.46,0.56+43.90,0.57+46.34,0.57+48.78,0.58+51.22,0.59+53.66,0.60+56.10,0.61+58.54,0.61+60.98,0.62+63.41,0.63+65.85,0.65+68.29,0.66+70.73,0.67+73.17,0.68+75.61,0.70+78.05,0.71+80.49,0.72+82.93,0.73+85.37,0.75+87.80,0.75+90.24,0.76+92.68,0.77+95.12,0.78+97.56,0.80+100.00,0.81*+2.38,0.96+4.76,0.97+7.14,0.99+9.52,1.01+11.90,1.02+14.29,1.02+16.67,1.03+19.05,1.05+21.43,1.06+23.81,1.07+26.19,1.09+28.57,1.10+30.95,1.11+33.33,1.12+35.71,1.13+38.10,1.14+40.48,1.16+42.86,1.17+45.24,1.18+47.62,1.19+50.00,1.21+52.38,1.22+54.76,1.22+57.14,1.22+59.52,1.23+61.90,1.23+64.29,1.24+66.67,1.25+69.05,1.25+71.43,1.27+73.81,1.27+76.19,1.29+78.57,1.31+80.95,1.32+83.33,1.33+85.71,1.35+88.10,1.38+90.48,1.39+92.86,1.43+95.24,1.45+97.62,1.49+100.00,1.53 
+2021-07-05 10:42:36,440 172.18.0.1 - - [05/Jul/2021 10:42:36] "POST /compositor/conduct HTTP/1.1" 200 -
+2021-07-05 11:07:06,488 172.18.0.1 - - [05/Jul/2021 11:07:06] "GET / HTTP/1.1" 200 -
+2021-07-05 11:07:06,713 172.18.0.1 - - [05/Jul/2021 11:07:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2021-07-05 11:07:06,726 172.18.0.1 - - [05/Jul/2021 11:07:06] "[36mGET /static/sing.css HTTP/1.1[0m" 304 -
+2021-07-05 11:07:06,893 172.18.0.1 - - [05/Jul/2021 11:07:06] "[36mGET /static/sing.js HTTP/1.1[0m" 304 -
+2021-07-05 11:07:06,897 172.18.0.1 - - [05/Jul/2021 11:07:06] "[36mGET /static/base.js HTTP/1.1[0m" 304 -
+2021-07-05 11:26:00,547 172.18.0.1 - - [05/Jul/2021 11:26:00] "[33mGET /OneRepublic%20-%20Counting%20Stars%20[Lyrics].mp3 HTTP/1.1[0m" 404 -
+2021-07-05 11:26:01,445 172.18.0.1 - - [05/Jul/2021 11:26:01] "GET / HTTP/1.1" 200 -
+2021-07-05 11:26:01,612 172.18.0.1 - - [05/Jul/2021 11:26:01] "[36mGET /static/sing.js HTTP/1.1[0m" 304 -
+2021-07-05 11:26:01,638 172.18.0.1 - - [05/Jul/2021 11:26:01] "[36mGET /static/base.js HTTP/1.1[0m" 304 -
+2021-07-05 11:26:01,649 172.18.0.1 - - [05/Jul/2021 11:26:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2021-07-05 11:26:01,733 172.18.0.1 - - [05/Jul/2021 11:26:01] "[33mGET /OneRepublic%20-%20Counting%20Stars%20[Lyrics].mp3 HTTP/1.1[0m" 404 -
+2021-07-05 11:26:01,741 172.18.0.1 - - [05/Jul/2021 11:26:01] "[36mGET /static/sing.css HTTP/1.1[0m" 304 -
+2021-07-05 11:27:21,522 ===================> compositor =>> opening compositor 
+2021-07-05 11:27:21,525 172.18.0.1 - - [05/Jul/2021 11:27:21] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:27:21,719 172.18.0.1 - - [05/Jul/2021 11:27:21] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:27:21,724 172.18.0.1 - - [05/Jul/2021 11:27:21] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:27:21,732 172.18.0.1 - - [05/Jul/2021 11:27:21] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:27:22,469 172.18.0.1 - - [05/Jul/2021 11:27:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:27:28,176 172.18.0.1 - - [05/Jul/2021 11:27:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:27:28,426 172.18.0.1 - - [05/Jul/2021 11:27:28] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:27:28,587 172.18.0.1 - - [05/Jul/2021 11:27:28] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:27:51,304 ===================> compositor =>> opening compositor 
+2021-07-05 11:27:51,306 172.18.0.1 - - [05/Jul/2021 11:27:51] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:27:51,508 172.18.0.1 - - [05/Jul/2021 11:27:51] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:27:51,521 172.18.0.1 - - [05/Jul/2021 11:27:51] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:27:51,910 172.18.0.1 - - [05/Jul/2021 11:27:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:27:53,887 172.18.0.1 - - [05/Jul/2021 11:27:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:27:53,908 172.18.0.1 - - [05/Jul/2021 11:27:53] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:29:52,596 ===================> compositor =>> opening compositor 
+2021-07-05 11:29:52,598 172.18.0.1 - - [05/Jul/2021 11:29:52] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:29:52,802 172.18.0.1 - - [05/Jul/2021 11:29:52] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:29:52,817 172.18.0.1 - - [05/Jul/2021 11:29:52] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:29:52,819 172.18.0.1 - - [05/Jul/2021 11:29:52] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:29:53,370 172.18.0.1 - - [05/Jul/2021 11:29:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:29:59,221 172.18.0.1 - - [05/Jul/2021 11:29:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:29:59,257 172.18.0.1 - - [05/Jul/2021 11:29:59] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:29:59,418 172.18.0.1 - - [05/Jul/2021 11:29:59] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:30:57,616 ===================> compositor =>> opening compositor 
+2021-07-05 11:30:57,617 172.18.0.1 - - [05/Jul/2021 11:30:57] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:30:57,808 172.18.0.1 - - [05/Jul/2021 11:30:57] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:30:57,810 172.18.0.1 - - [05/Jul/2021 11:30:57] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:30:58,155 172.18.0.1 - - [05/Jul/2021 11:30:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:31:14,116 ===================> compositor =>> opening compositor 
+2021-07-05 11:31:14,117 172.18.0.1 - - [05/Jul/2021 11:31:14] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:31:14,310 172.18.0.1 - - [05/Jul/2021 11:31:14] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:31:14,312 172.18.0.1 - - [05/Jul/2021 11:31:14] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:31:14,701 172.18.0.1 - - [05/Jul/2021 11:31:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:31:16,830 172.18.0.1 - - [05/Jul/2021 11:31:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:31:16,868 172.18.0.1 - - [05/Jul/2021 11:31:16] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:31:26,985 172.18.0.1 - - [05/Jul/2021 11:31:26] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:31:27,208 172.18.0.1 - - [05/Jul/2021 11:31:27] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:32:39,188 ===================> compositor =>> opening compositor 
+2021-07-05 11:32:39,198 172.18.0.1 - - [05/Jul/2021 11:32:39] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:32:39,390 172.18.0.1 - - [05/Jul/2021 11:32:39] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:32:39,393 172.18.0.1 - - [05/Jul/2021 11:32:39] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:32:39,794 172.18.0.1 - - [05/Jul/2021 11:32:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:32:41,174 172.18.0.1 - - [05/Jul/2021 11:32:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:32:41,208 172.18.0.1 - - [05/Jul/2021 11:32:41] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:32:44,868 ===================> compositor =>> opening compositor 
+2021-07-05 11:32:44,871 172.18.0.1 - - [05/Jul/2021 11:32:44] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:32:45,083 172.18.0.1 - - [05/Jul/2021 11:32:45] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:32:45,090 172.18.0.1 - - [05/Jul/2021 11:32:45] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:32:45,495 172.18.0.1 - - [05/Jul/2021 11:32:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:32:47,269 172.18.0.1 - - [05/Jul/2021 11:32:47] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:32:47,302 172.18.0.1 - - [05/Jul/2021 11:32:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:32:47,549 172.18.0.1 - - [05/Jul/2021 11:32:47] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:33:24,334 ===================> compositor =>> opening compositor 
+2021-07-05 11:33:24,338 172.18.0.1 - - [05/Jul/2021 11:33:24] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:33:24,546 172.18.0.1 - - [05/Jul/2021 11:33:24] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:33:24,629 172.18.0.1 - - [05/Jul/2021 11:33:24] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:33:24,954 172.18.0.1 - - [05/Jul/2021 11:33:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:33:29,492 172.18.0.1 - - [05/Jul/2021 11:33:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:33:29,532 172.18.0.1 - - [05/Jul/2021 11:33:29] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:34:18,533 ===================> compositor =>> opening compositor 
+2021-07-05 11:34:18,536 172.18.0.1 - - [05/Jul/2021 11:34:18] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:34:18,752 172.18.0.1 - - [05/Jul/2021 11:34:18] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:34:18,812 172.18.0.1 - - [05/Jul/2021 11:34:18] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:34:19,263 172.18.0.1 - - [05/Jul/2021 11:34:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:34:24,385 172.18.0.1 - - [05/Jul/2021 11:34:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:34:24,438 172.18.0.1 - - [05/Jul/2021 11:34:24] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:34:24,649 172.18.0.1 - - [05/Jul/2021 11:34:24] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:36:23,312 ===================> compositor =>> opening compositor 
+2021-07-05 11:36:23,314 172.18.0.1 - - [05/Jul/2021 11:36:23] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:36:23,499 172.18.0.1 - - [05/Jul/2021 11:36:23] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:36:23,521 172.18.0.1 - - [05/Jul/2021 11:36:23] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:36:23,637 172.18.0.1 - - [05/Jul/2021 11:36:23] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:36:24,110 172.18.0.1 - - [05/Jul/2021 11:36:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:36:47,617 ===================> compositor =>> opening compositor 
+2021-07-05 11:36:47,618 172.18.0.1 - - [05/Jul/2021 11:36:47] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:36:47,803 172.18.0.1 - - [05/Jul/2021 11:36:47] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:36:47,812 172.18.0.1 - - [05/Jul/2021 11:36:47] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:36:48,201 172.18.0.1 - - [05/Jul/2021 11:36:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:36:50,189 172.18.0.1 - - [05/Jul/2021 11:36:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:36:50,208 172.18.0.1 - - [05/Jul/2021 11:36:50] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:36:50,418 172.18.0.1 - - [05/Jul/2021 11:36:50] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:38:15,725 ===================> compositor =>> opening compositor 
+2021-07-05 11:38:15,728 172.18.0.1 - - [05/Jul/2021 11:38:15] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:38:15,926 172.18.0.1 - - [05/Jul/2021 11:38:15] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:38:15,934 172.18.0.1 - - [05/Jul/2021 11:38:15] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:38:16,316 172.18.0.1 - - [05/Jul/2021 11:38:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:38:17,804 172.18.0.1 - - [05/Jul/2021 11:38:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:38:17,854 172.18.0.1 - - [05/Jul/2021 11:38:17] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:39:11,957 ===================> compositor =>> opening compositor 
+2021-07-05 11:39:11,958 172.18.0.1 - - [05/Jul/2021 11:39:11] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:39:12,203 172.18.0.1 - - [05/Jul/2021 11:39:12] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:39:12,211 172.18.0.1 - - [05/Jul/2021 11:39:12] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:39:12,221 172.18.0.1 - - [05/Jul/2021 11:39:12] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:39:12,738 172.18.0.1 - - [05/Jul/2021 11:39:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:39:17,684 172.18.0.1 - - [05/Jul/2021 11:39:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:39:17,723 172.18.0.1 - - [05/Jul/2021 11:39:17] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:41:28,218 ===================> compositor =>> opening compositor 
+2021-07-05 11:41:28,221 172.18.0.1 - - [05/Jul/2021 11:41:28] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:41:28,422 172.18.0.1 - - [05/Jul/2021 11:41:28] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:41:28,432 172.18.0.1 - - [05/Jul/2021 11:41:28] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:41:28,452 172.18.0.1 - - [05/Jul/2021 11:41:28] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:41:28,824 172.18.0.1 - - [05/Jul/2021 11:41:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:41:30,932 172.18.0.1 - - [05/Jul/2021 11:41:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:41:30,974 172.18.0.1 - - [05/Jul/2021 11:41:30] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:41:31,145 172.18.0.1 - - [05/Jul/2021 11:41:31] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:41:57,758 ===================> compositor =>> conducting 18 {'id': 18, 'name': 'I dont cnow', 'audio': 'sddlkjkljk', 'lyrics': "Lately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\nYeah, we'll be counting stars\n\nI see this life, like a swinging vine\nSwing my heart across the line\nAnd in my face is flashing signs\nSeek it out and ye' shall find\n\nOld, but I'm not that old\nYoung, but I'm not that bold\nAnd I don't think the world is sold\nI'm just doing what we're told\n\nI feel something so right\nDoing the wrong thing\nAnd I feel something so wrong\nDoing the right thing\nI couldn't lie, couldn't lie, couldn't lie\nEverything that kills me makes me feel alive\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\n\nLately, I've been, I've been losing sleep\nDreaming about the things we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be, we'll be counting stars\nYeah\n\nI feel your love and I feel it burn\nDown this river, every turn\nHope is our four-letter word\nMake that money, watch it burn\n\nOld, but I'm not that old\nYoung, but I'm not that bold\nAnd I don't think the world is sold\nI'm just doing what we're told\n\nAnd I feel something so wrong\nDoing the right thing\nI couldn't lie, couldn't lie, couldn't lie\nEverything that drowns me makes me wanna fly\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be, we'll be counting stars\n\nOh, take that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nEverything that kills me\nMakes me feel alive\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be counting stars\n\nLately, I've been, I've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been, I've been praying hard\nSaid no more counting dollars\nWe'll be, we'll be counting stars\n\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned\nTake that money, watch it burn\nSink in the river the lessons I've learned", 'conductor': '+2.44,0.07+4.88,0.10+7.32,0.14+9.76,0.18+12.20,0.20+14.63,0.26+17.07,0.28+19.51,0.34+21.95,0.36+24.39,0.38+26.83,0.39+29.27,0.40+31.71,0.42+34.15,0.44+36.59,0.46+39.02,0.47+41.46,0.49+43.90,0.51+46.34,0.53+48.78,0.55+51.22,0.57+53.66,0.60+56.10,0.62+58.54,0.63+60.98,0.65+63.41,0.67+65.85,0.69+68.29,0.72+70.73,0.74+73.17,0.76+75.61,0.78+78.05,0.79+80.49,0.80+82.93,0.84+85.37,0.87+87.80,0.89+90.24,0.90+92.68,0.91+95.12,0.94+97.56,0.96+100.00,0.97*+2.38,1.29+4.76,1.35+7.14,1.38+9.52,1.40+11.90,1.44+14.29,1.47+16.67,1.50+19.05,1.52+21.43,1.53+23.81,1.55+26.19,1.58+28.57,1.60+30.95,1.63+33.33,1.65+35.71,1.69+38.10,1.71+40.48,1.72+42.86,1.75+45.24,1.77+47.62,1.80+50.00,1.82+52.38,1.84+54.76,1.86+57.14,1.88+59.52,1.90+61.90,1.92+64.29,1.94+66.67,1.97+69.05,1.97+71.43,1.99+73.81,2.00+76.19,2.03+78.57,2.04+80.95,2.06+83.33,2.10+85.71,2.14+88.10,2.19+90.48,2.24+92.86,2.30+95.24,2.35+97.62,2.41+100.00,2.50*+2.33,2.77+4.65,2.82+6.98,2.83+9.30,2.86+11.63,2.87+13.95,2.90+16.28,2.91+18.60,2.94+20.93,2.95+23.26,2.96+25.58,2.98+27.91,2.99+30.23,3.02+32.56,3.03+34.88,3.07+37.21,3.08+39.53,3.09+41.86,3.11+44.19,3.13+46.51,3.16+48.84,3.17+51.16,3.20+53.49,3.21+55.81,3.22+58.14,3.25+60.47,3.26+62.79,3.27+65.12,3.30+67.44,3.33+69.77,3.33+72.09,3.36+74.42,3.40+76.74,3.42+79.07,3.42+81.40,3.43+83.72,3.45+86.05,3.47+88.37,3.51+90.70,3.54+93.02,3.56+95.35,3.59+97.67,3.62+100.00,3.66'} 
+2021-07-05 11:41:58,176 ===================> Tune =>> conducted +2.44,0.07+4.88,0.10+7.32,0.14+9.76,0.18+12.20,0.20+14.63,0.26+17.07,0.28+19.51,0.34+21.95,0.36+24.39,0.38+26.83,0.39+29.27,0.40+31.71,0.42+34.15,0.44+36.59,0.46+39.02,0.47+41.46,0.49+43.90,0.51+46.34,0.53+48.78,0.55+51.22,0.57+53.66,0.60+56.10,0.62+58.54,0.63+60.98,0.65+63.41,0.67+65.85,0.69+68.29,0.72+70.73,0.74+73.17,0.76+75.61,0.78+78.05,0.79+80.49,0.80+82.93,0.84+85.37,0.87+87.80,0.89+90.24,0.90+92.68,0.91+95.12,0.94+97.56,0.96+100.00,0.97*+2.38,1.29+4.76,1.35+7.14,1.38+9.52,1.40+11.90,1.44+14.29,1.47+16.67,1.50+19.05,1.52+21.43,1.53+23.81,1.55+26.19,1.58+28.57,1.60+30.95,1.63+33.33,1.65+35.71,1.69+38.10,1.71+40.48,1.72+42.86,1.75+45.24,1.77+47.62,1.80+50.00,1.82+52.38,1.84+54.76,1.86+57.14,1.88+59.52,1.90+61.90,1.92+64.29,1.94+66.67,1.97+69.05,1.97+71.43,1.99+73.81,2.00+76.19,2.03+78.57,2.04+80.95,2.06+83.33,2.10+85.71,2.14+88.10,2.19+90.48,2.24+92.86,2.30+95.24,2.35+97.62,2.41+100.00,2.50*+2.33,2.77+4.65,2.82+6.98,2.83+9.30,2.86+11.63,2.87+13.95,2.90+16.28,2.91+18.60,2.94+20.93,2.95+23.26,2.96+25.58,2.98+27.91,2.99+30.23,3.02+32.56,3.03+34.88,3.07+37.21,3.08+39.53,3.09+41.86,3.11+44.19,3.13+46.51,3.16+48.84,3.17+51.16,3.20+53.49,3.21+55.81,3.22+58.14,3.25+60.47,3.26+62.79,3.27+65.12,3.30+67.44,3.33+69.77,3.33+72.09,3.36+74.42,3.40+76.74,3.42+79.07,3.42+81.40,3.43+83.72,3.45+86.05,3.47+88.37,3.51+90.70,3.54+93.02,3.56+95.35,3.59+97.67,3.62+100.00,3.66 
+2021-07-05 11:41:58,469 172.18.0.1 - - [05/Jul/2021 11:41:58] "POST /compositor/conduct HTTP/1.1" 200 -
+2021-07-05 11:52:45,838 ===================> compositor =>> opening compositor 
+2021-07-05 11:52:45,841 172.18.0.1 - - [05/Jul/2021 11:52:45] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:52:46,056 172.18.0.1 - - [05/Jul/2021 11:52:46] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:52:46,131 172.18.0.1 - - [05/Jul/2021 11:52:46] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:52:46,141 172.18.0.1 - - [05/Jul/2021 11:52:46] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:52:48,356 172.18.0.1 - - [05/Jul/2021 11:52:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:53:39,498 ===================> compositor =>> opening compositor 
+2021-07-05 11:53:39,501 172.18.0.1 - - [05/Jul/2021 11:53:39] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:53:39,705 172.18.0.1 - - [05/Jul/2021 11:53:39] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:53:39,711 172.18.0.1 - - [05/Jul/2021 11:53:39] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:53:39,717 172.18.0.1 - - [05/Jul/2021 11:53:39] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:53:40,240 172.18.0.1 - - [05/Jul/2021 11:53:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:54:50,727 ===================> compositor =>> opening compositor 
+2021-07-05 11:54:50,729 172.18.0.1 - - [05/Jul/2021 11:54:50] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:54:50,911 172.18.0.1 - - [05/Jul/2021 11:54:50] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:54:50,917 172.18.0.1 - - [05/Jul/2021 11:54:50] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:54:50,921 172.18.0.1 - - [05/Jul/2021 11:54:50] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:54:51,281 172.18.0.1 - - [05/Jul/2021 11:54:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 11:58:01,418 ===================> compositor =>> opening compositor 
+2021-07-05 11:58:01,426 172.18.0.1 - - [05/Jul/2021 11:58:01] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 11:58:01,627 172.18.0.1 - - [05/Jul/2021 11:58:01] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 11:58:01,642 172.18.0.1 - - [05/Jul/2021 11:58:01] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 11:58:01,653 172.18.0.1 - - [05/Jul/2021 11:58:01] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 11:58:02,104 172.18.0.1 - - [05/Jul/2021 11:58:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:00:16,546 ===================> compositor =>> opening compositor 
+2021-07-05 12:00:16,548 172.18.0.1 - - [05/Jul/2021 12:00:16] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:00:16,730 172.18.0.1 - - [05/Jul/2021 12:00:16] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:00:16,740 172.18.0.1 - - [05/Jul/2021 12:00:16] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:00:16,745 172.18.0.1 - - [05/Jul/2021 12:00:16] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:00:17,144 172.18.0.1 - - [05/Jul/2021 12:00:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:01:34,880 ===================> compositor =>> opening compositor 
+2021-07-05 12:01:34,882 172.18.0.1 - - [05/Jul/2021 12:01:34] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:01:35,207 172.18.0.1 - - [05/Jul/2021 12:01:35] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:01:35,210 172.18.0.1 - - [05/Jul/2021 12:01:35] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:01:35,239 172.18.0.1 - - [05/Jul/2021 12:01:35] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:01:35,784 172.18.0.1 - - [05/Jul/2021 12:01:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:03:01,196 ===================> compositor =>> opening compositor 
+2021-07-05 12:03:01,199 172.18.0.1 - - [05/Jul/2021 12:03:01] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:03:01,381 172.18.0.1 - - [05/Jul/2021 12:03:01] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:03:01,391 172.18.0.1 - - [05/Jul/2021 12:03:01] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:03:01,396 172.18.0.1 - - [05/Jul/2021 12:03:01] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:03:01,906 172.18.0.1 - - [05/Jul/2021 12:03:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:05:47,373 ===================> compositor =>> opening compositor 
+2021-07-05 12:05:47,375 172.18.0.1 - - [05/Jul/2021 12:05:47] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:05:47,559 172.18.0.1 - - [05/Jul/2021 12:05:47] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:05:47,562 172.18.0.1 - - [05/Jul/2021 12:05:47] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:05:47,567 172.18.0.1 - - [05/Jul/2021 12:05:47] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:05:47,937 172.18.0.1 - - [05/Jul/2021 12:05:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:06:11,628 ===================> compositor =>> opening compositor 
+2021-07-05 12:06:11,633 172.18.0.1 - - [05/Jul/2021 12:06:11] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:06:11,826 172.18.0.1 - - [05/Jul/2021 12:06:11] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:06:11,834 172.18.0.1 - - [05/Jul/2021 12:06:11] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:06:12,226 172.18.0.1 - - [05/Jul/2021 12:06:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:06:33,461 ===================> compositor =>> opening compositor 
+2021-07-05 12:06:33,468 172.18.0.1 - - [05/Jul/2021 12:06:33] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:06:33,662 172.18.0.1 - - [05/Jul/2021 12:06:33] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:06:33,674 172.18.0.1 - - [05/Jul/2021 12:06:33] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:06:33,700 172.18.0.1 - - [05/Jul/2021 12:06:33] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:06:34,073 172.18.0.1 - - [05/Jul/2021 12:06:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:06:45,452 ===================> compositor =>> opening compositor 
+2021-07-05 12:06:45,456 172.18.0.1 - - [05/Jul/2021 12:06:45] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:06:45,637 172.18.0.1 - - [05/Jul/2021 12:06:45] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:06:45,639 172.18.0.1 - - [05/Jul/2021 12:06:45] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:06:46,024 172.18.0.1 - - [05/Jul/2021 12:06:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:07:05,677 ===================> compositor =>> opening compositor 
+2021-07-05 12:07:05,678 172.18.0.1 - - [05/Jul/2021 12:07:05] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:07:05,876 172.18.0.1 - - [05/Jul/2021 12:07:05] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:07:05,886 172.18.0.1 - - [05/Jul/2021 12:07:05] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:07:05,896 172.18.0.1 - - [05/Jul/2021 12:07:05] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:07:06,280 172.18.0.1 - - [05/Jul/2021 12:07:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:07:18,477 ===================> compositor =>> opening compositor 
+2021-07-05 12:07:18,478 172.18.0.1 - - [05/Jul/2021 12:07:18] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:13:06,081 ===================> compositor =>> here we go 
+2021-07-05 12:13:06,116  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-07-05 12:13:06,116  * Running on http://172.18.0.22:8080/ (Press CTRL+C to quit)
+2021-07-05 12:13:08,734 172.18.0.1 - - [05/Jul/2021 12:13:08] "GET / HTTP/1.1" 200 -
+2021-07-05 12:13:08,735 172.18.0.1 - - [05/Jul/2021 12:13:08] "GET / HTTP/1.1" 200 -
+2021-07-05 12:13:08,757 ===================> compositor =>> opening compositor 
+2021-07-05 12:13:08,796 172.18.0.1 - - [05/Jul/2021 12:13:08] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:13:08,917 172.18.0.1 - - [05/Jul/2021 12:13:08] "[36mGET /static/sing.css HTTP/1.1[0m" 304 -
+2021-07-05 12:13:08,924 172.18.0.1 - - [05/Jul/2021 12:13:08] "[36mGET /static/sing.js HTTP/1.1[0m" 304 -
+2021-07-05 12:13:08,932 172.18.0.1 - - [05/Jul/2021 12:13:08] "[36mGET /static/base.js HTTP/1.1[0m" 304 -
+2021-07-05 12:13:08,939 172.18.0.1 - - [05/Jul/2021 12:13:08] "[33mGET /OneRepublic%20-%20Counting%20Stars%20[Lyrics].mp3 HTTP/1.1[0m" 404 -
+2021-07-05 12:13:08,942 172.18.0.1 - - [05/Jul/2021 12:13:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2021-07-05 12:13:08,989 172.18.0.1 - - [05/Jul/2021 12:13:08] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:13:08,999 172.18.0.1 - - [05/Jul/2021 12:13:08] "[36mGET /compositor/compositor/compositor.css HTTP/1.1[0m" 304 -
+2021-07-05 12:13:09,010 172.18.0.1 - - [05/Jul/2021 12:13:09] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:13:09,228 172.18.0.1 - - [05/Jul/2021 12:13:09] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:13:09,408 172.18.0.1 - - [05/Jul/2021 12:13:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:13:25,035 172.18.0.1 - - [05/Jul/2021 12:13:25] "GET / HTTP/1.1" 200 -
+2021-07-05 12:13:25,235 172.18.0.1 - - [05/Jul/2021 12:13:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2021-07-05 12:13:25,267 172.18.0.1 - - [05/Jul/2021 12:13:25] "[36mGET /static/base.js HTTP/1.1[0m" 304 -
+2021-07-05 12:13:25,306 172.18.0.1 - - [05/Jul/2021 12:13:25] "[36mGET /static/sing.css HTTP/1.1[0m" 304 -
+2021-07-05 12:13:25,324 172.18.0.1 - - [05/Jul/2021 12:13:25] "[36mGET /static/sing.js HTTP/1.1[0m" 304 -
+2021-07-05 12:13:25,350 172.18.0.1 - - [05/Jul/2021 12:13:25] "[33mGET /OneRepublic%20-%20Counting%20Stars%20[Lyrics].mp3 HTTP/1.1[0m" 404 -
+2021-07-05 12:15:03,375 ===================> compositor =>> here we go 
+2021-07-05 12:15:03,411  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-07-05 12:15:03,411  * Running on http://172.18.0.22:8080/ (Press CTRL+C to quit)
+2021-07-05 12:15:06,773 172.18.0.1 - - [05/Jul/2021 12:15:06] "GET / HTTP/1.1" 200 -
+2021-07-05 12:15:06,948 172.18.0.1 - - [05/Jul/2021 12:15:06] "[36mGET /static/sing.css HTTP/1.1[0m" 304 -
+2021-07-05 12:15:06,952 172.18.0.1 - - [05/Jul/2021 12:15:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2021-07-05 12:15:07,174 172.18.0.1 - - [05/Jul/2021 12:15:07] "[36mGET /static/sing.js HTTP/1.1[0m" 304 -
+2021-07-05 12:15:07,176 172.18.0.1 - - [05/Jul/2021 12:15:07] "[36mGET /static/base.js HTTP/1.1[0m" 304 -
+2021-07-05 12:19:08,204 172.18.0.1 - - [05/Jul/2021 12:19:08] "[33mGET /OneRepublic%20-%20Counting%20Stars%20[Lyrics].mp3 HTTP/1.1[0m" 404 -
+2021-07-05 12:21:47,760 ===================> compositor =>> opening compositor 
+2021-07-05 12:21:47,784 172.18.0.1 - - [05/Jul/2021 12:21:47] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:21:47,972 172.18.0.1 - - [05/Jul/2021 12:21:47] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:21:47,984 172.18.0.1 - - [05/Jul/2021 12:21:47] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:21:47,985 172.18.0.1 - - [05/Jul/2021 12:21:47] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:21:48,627 172.18.0.1 - - [05/Jul/2021 12:21:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:21:55,886 172.18.0.1 - - [05/Jul/2021 12:21:55] "POST /compositor/get HTTP/1.1" 200 -
+2021-07-05 12:22:29,773 ===================> compositor =>> opening compositor 
+2021-07-05 12:22:29,774 172.18.0.1 - - [05/Jul/2021 12:22:29] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:22:29,984 172.18.0.1 - - [05/Jul/2021 12:22:29] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:22:29,997 172.18.0.1 - - [05/Jul/2021 12:22:29] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:22:29,998 172.18.0.1 - - [05/Jul/2021 12:22:29] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:22:30,570 172.18.0.1 - - [05/Jul/2021 12:22:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:25:59,688 ===================> compositor =>> opening compositor 
+2021-07-05 12:25:59,690 172.18.0.1 - - [05/Jul/2021 12:25:59] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:25:59,890 172.18.0.1 - - [05/Jul/2021 12:25:59] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:25:59,903 172.18.0.1 - - [05/Jul/2021 12:25:59] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:25:59,931 172.18.0.1 - - [05/Jul/2021 12:25:59] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:26:00,463 172.18.0.1 - - [05/Jul/2021 12:26:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:26:15,356 ===================> compositor =>> opening compositor 
+2021-07-05 12:26:15,357 172.18.0.1 - - [05/Jul/2021 12:26:15] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:26:15,541 172.18.0.1 - - [05/Jul/2021 12:26:15] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:26:15,547 172.18.0.1 - - [05/Jul/2021 12:26:15] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:26:15,943 172.18.0.1 - - [05/Jul/2021 12:26:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:26:35,602 ===================> compositor =>> opening compositor 
+2021-07-05 12:26:35,607 172.18.0.1 - - [05/Jul/2021 12:26:35] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:26:35,798 172.18.0.1 - - [05/Jul/2021 12:26:35] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:26:35,811 172.18.0.1 - - [05/Jul/2021 12:26:35] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:26:35,822 172.18.0.1 - - [05/Jul/2021 12:26:35] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:26:36,315 172.18.0.1 - - [05/Jul/2021 12:26:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:27:19,356 ===================> compositor =>> opening compositor 
+2021-07-05 12:27:19,357 172.18.0.1 - - [05/Jul/2021 12:27:19] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:27:19,575 172.18.0.1 - - [05/Jul/2021 12:27:19] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:27:19,587 172.18.0.1 - - [05/Jul/2021 12:27:19] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:27:19,593 172.18.0.1 - - [05/Jul/2021 12:27:19] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:27:20,228 172.18.0.1 - - [05/Jul/2021 12:27:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:29:40,364 ===================> compositor =>> opening compositor 
+2021-07-05 12:29:40,365 172.18.0.1 - - [05/Jul/2021 12:29:40] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:29:40,553 172.18.0.1 - - [05/Jul/2021 12:29:40] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:29:40,566 172.18.0.1 - - [05/Jul/2021 12:29:40] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:29:40,573 172.18.0.1 - - [05/Jul/2021 12:29:40] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:29:40,887 172.18.0.1 - - [05/Jul/2021 12:29:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:30:27,043 ===================> compositor =>> opening compositor 
+2021-07-05 12:30:27,045 172.18.0.1 - - [05/Jul/2021 12:30:27] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:30:27,290 172.18.0.1 - - [05/Jul/2021 12:30:27] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:30:27,305 172.18.0.1 - - [05/Jul/2021 12:30:27] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:30:27,306 172.18.0.1 - - [05/Jul/2021 12:30:27] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:30:27,625 172.18.0.1 - - [05/Jul/2021 12:30:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:31:18,049 ===================> compositor =>> opening compositor 
+2021-07-05 12:31:18,071 172.18.0.1 - - [05/Jul/2021 12:31:18] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:31:18,306 172.18.0.1 - - [05/Jul/2021 12:31:18] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:31:18,355 172.18.0.1 - - [05/Jul/2021 12:31:18] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:31:18,380 172.18.0.1 - - [05/Jul/2021 12:31:18] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:31:22,404 172.18.0.1 - - [05/Jul/2021 12:31:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:32:43,755 ===================> compositor =>> opening compositor 
+2021-07-05 12:32:43,757 172.18.0.1 - - [05/Jul/2021 12:32:43] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:32:43,966 172.18.0.1 - - [05/Jul/2021 12:32:43] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:32:43,974 172.18.0.1 - - [05/Jul/2021 12:32:43] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:32:44,031 172.18.0.1 - - [05/Jul/2021 12:32:44] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:32:50,638 172.18.0.1 - - [05/Jul/2021 12:32:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:33:38,779 ===================> compositor =>> opening compositor 
+2021-07-05 12:33:38,780 172.18.0.1 - - [05/Jul/2021 12:33:38] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:33:39,320 172.18.0.1 - - [05/Jul/2021 12:33:39] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:33:39,337 172.18.0.1 - - [05/Jul/2021 12:33:39] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:33:39,351 172.18.0.1 - - [05/Jul/2021 12:33:39] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:33:39,876 172.18.0.1 - - [05/Jul/2021 12:33:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-05 12:34:21,291 ===================> compositor =>> opening compositor 
+2021-07-05 12:34:21,292 172.18.0.1 - - [05/Jul/2021 12:34:21] "GET /compositor/ HTTP/1.1" 200 -
+2021-07-05 12:34:21,539 172.18.0.1 - - [05/Jul/2021 12:34:21] "GET /compositor/compositor/compositor.js HTTP/1.1" 200 -
+2021-07-05 12:34:21,544 172.18.0.1 - - [05/Jul/2021 12:34:21] "GET /compositor/compositor/compositor.css HTTP/1.1" 200 -
+2021-07-05 12:34:21,561 172.18.0.1 - - [05/Jul/2021 12:34:21] "[35m[1mGET /static/OneRepublic.mp3 HTTP/1.1[0m" 206 -
+2021-07-05 12:34:21,956 172.18.0.1 - - [05/Jul/2021 12:34:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
