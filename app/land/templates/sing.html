@@ -7,7 +7,7 @@
 
 <head>
   {{super() }}
-  <link rel="stylesheet" href="{{ url_for('static', filename='sing.css') }}">
+  <link rel="stylesheet" href="{{ url_for('land.static', filename='sing.css') }}">
 </head>
 {% endblock %}
 
@@ -24,10 +24,13 @@
   <h1>Karaoke</h1>
   <div id='tune'></div>
 
-  <h1>Mp3 Player</h1>
-  <audio id='music' controls src="/OneRepublic - Counting Stars [Lyrics].mp3"></audio>
+  <div id='controls'>
+    <h1>Mp3 Player</h1>
+    <audio id='music' controls src="{{ url_for('static', filename='OneRepublic.mp3') }}"></audio>
+  </div>
 </div>
-<script type="text/javascript" src="{{ url_for('static', filename='sing.js') }}"></script>
+<div id="clock"></div>
+<script type="text/javascript" src="{{ url_for('land.static', filename='sing.js') }}"></script>
 {% endblock %}
 
 {% block footer %}

@@ -1,6 +1,6 @@
 
 var music = document.getElementById('music');
-music.playbackRate = 0.2;
+music.playbackRate = 0.12;
 var composing = false;
 var clockInterval;
 var tune = {};
@@ -36,15 +36,13 @@ function spell(char, line){
 }
 
 function prepareWorkdesk(tune){
-  //document.getElementById('workdesk').innerText = '';
-  let composed = tune.conductor.length;
+  document.getElementById('workdesk').innerText = '';
   var text = tune.lyrics.split("\n")
   for(i=0;i<text.length;i++){
     let d = document.createElement('div');
     d.id = `l${i}`;
     d.classList.add('line');
     document.getElementById('workdesk').append(d);
-    console.log('i < composed', i, composed);
     for(j=0;j<text[i].length;j++){
       let char = document.createElement('div');
       char.innerText = text[i][j];
@@ -58,21 +56,22 @@ function prepareWorkdesk(tune){
       }
       d.append(char);
     }
-    if(i < composed){
+    if(tune.conductor[i]){
       d.classList.add('composed');
       let b = document.createElement('button');
       b.innerText = 'del';
-      b.onclick = deleteLine(i);
+      b.onclick = deleteLine;
       d.append(b);
       d.classList.add('clicked');
     }
   }
 }
 
-function deleteLine(n){
-  console.log('working');
+function deleteLine(e){
+  console.log(e.target.parentElement.id);
+  let n = e.target.parentElement.id.slice(1);
   tune.conductor[n] = '';
-  //prepareWorkdesk(tune);
+  prepareWorkdesk(tune);
 }
 
 document.addEventListener('keydown', startWork);

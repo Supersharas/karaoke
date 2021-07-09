@@ -43,6 +43,11 @@ body {
   align-items: center;
 }
 
+#controls {
+  position: fixed;
+  bottom: 0;
+}
+
 #song{
   display: inline-block;
 }
@@ -60,6 +65,10 @@ body {
   background-size: 200% 100%;
   background-position: 100% 0;
   text-decoration: none;
+}
+
+#clock{
+  visibility: hidden;
 }
 
 /* .sing {

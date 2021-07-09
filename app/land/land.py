@@ -16,7 +16,8 @@ from app.classes.tune_error import Tune_error, Silent_error
 cache = Cache()
 
 land = Blueprint('land', __name__,
-    template_folder='templates')
+    template_folder='templates', 
+    static_folder='static', static_url_path='/land')
 
 @land.route('/')
 def home():
