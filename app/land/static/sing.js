@@ -1,4 +1,6 @@
 
+var is_singing = false;
+
 var music = document.getElementById('music');
 //music.playbackRate = 0.2;
 
@@ -44,29 +46,23 @@ function prepareWorkdesk(tune){
 function singing(lineNo, segment){
   let line = document.getElementById(`l${lineNo}`);
   if(segment > 0){
-    var duration = (tune.conductor[lineNo][segment][1] - 0.05 - music.currentTime) * 1000;
+    var duration = (tune.conductor[lineNo][segment][1] - (music.currentTime + 0.5)) * 1000;
+    console.log('dyration', duration);
   } else{
     let duration = 0;
   }
-  let has = line.hasChildNodes();
-  console.log('text', has);
-  if(!line.hasChildNodes()){
-    console.log('empty line');
-    duration = tune.conductor[lineNo +1 ][0][1] - tune.conductor[lineNo -1][tune.conductor[lineNo -1].length - 1][1];
-    insertClock(line, Math.round(duration));
-    setTimeout(function(){
-			singing(lineNo + 1, 0)
-		}, duration);
-  } else {
-    let segNo = tune.conductor[lineNo].length;
-    line.style.transition = `background-position ${duration}ms linear`;
-    backPos = 100 - tune.conductor[lineNo][segment][0];
-    line.style.backgroundPosition =  `${backPos}% 0`;
-    if (segment + 1 < segNo){
+  let segNo = tune.conductor[lineNo].length;
+  line.style.transition = `background-position ${duration}ms linear`;
+  backPos = 100 - tune.conductor[lineNo][segment][0] || 0;
+  line.style.backgroundPosition =  `${backPos}% 0`;
+  if (segment + 1 < segNo){
+    if(is_singing){
       setTimeout(function(){
         singing(lineNo, segment + 1)
       }, duration);
-    } else if (lineNo + 1 < tune.conductor.length){
+    }
+  } else if (lineNo + 1 < tune.conductor.length){
+    if(is_singing){
       setTimeout(function(){
         singing(lineNo + 1, 0)
       }, duration);
@@ -81,9 +77,11 @@ function insertClock(line, duration){
 }
 
 music.onplay = function(){
+  is_singing = true;
   singing(0, 0);
 }
 
+music.onpause = () => is_singing = false;
 
 function fetchPost(address, message){
   return fetch(address,{

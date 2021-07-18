@@ -4,6 +4,9 @@ from flask import current_app
 from app.models import db
 
 import json
+import platform
+
+print(platform.platform())
 
 compositor = Blueprint('compositor', __name__,
 		template_folder='templates',
@@ -16,7 +19,7 @@ from app.classes.loger import Tune_log
 
 tune_log = Tune_log('compositor')
 cache = Cache()
-tune_log.log('here we go')
+tune_log.log('here we go' + platform.platform())
 
 @compositor.route('/')
 def home():

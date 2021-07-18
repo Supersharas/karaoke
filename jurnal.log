@@ -1,0 +1,20 @@
+2021-07-18 10:23:13,570 ===================> compositor =>> here we go 
+2021-07-18 10:23:13,583  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-07-18 10:23:13,584  * Running on http://172.18.0.224:8080/ (Press CTRL+C to quit)
+2021-07-18 10:23:41,360 ===================> compositor =>> here we go 
+2021-07-18 10:23:41,376  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-07-18 10:23:41,376  * Running on http://172.18.0.224:8080/ (Press CTRL+C to quit)
+2021-07-18 10:27:23,564 ===================> compositor =>> here we goLinux 
+2021-07-18 10:27:23,600  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-07-18 10:27:23,601  * Running on http://172.18.0.224:8080/ (Press CTRL+C to quit)
+2021-07-18 10:28:16,479 ===================> compositor =>> here we goLinux-5.8.0-1035-gcp-x86_64-with-glibc2.27 
+2021-07-18 10:28:16,537  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-07-18 10:28:16,538  * Running on http://172.18.0.224:8080/ (Press CTRL+C to quit)
+2021-07-18 12:26:02,091 ===================> compositor =>> here we goLinux-5.8.0-1035-gcp-x86_64-with-glibc2.27 
+2021-07-18 12:26:02,124  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-07-18 12:26:02,125  * Running on http://172.18.0.224:8080/ (Press CTRL+C to quit)
