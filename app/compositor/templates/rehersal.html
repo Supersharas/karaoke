@@ -1,0 +1,31 @@
+
+{% extends "base.html" %}
+
+{% block title %}sing{% endblock %}
+
+{% block head %}
+
+<head>
+  {{super() }}
+  <link rel="stylesheet" href="{{ url_for('land.static', filename='sing.css') }}">
+</head>
+{% endblock %}
+
+{% block content %}
+
+<div id="concert">
+  <h1>Karaoke</h1>
+  <div id='tune'></div>
+
+  <div id='controls'>
+    <h1>Mp3 Player</h1>
+    <audio id='music' controls src="{{ url_for('static', filename='OneRepublic.mp3') }}"></audio>
+  </div>
+</div>
+<div id="clock"></div>
+<script type="text/javascript" src="{{ url_for('compositor.static', filename='rehersal.js') }}"></script>
+{% endblock %}
+
+{% block footer %}
+  cashed: {{cached}} size: {{size}} time: {{ex_time}}
+{% endblock %}

@@ -1,4 +1,3 @@
-
 var is_singing = false;
 
 var music = document.getElementById('music');
@@ -56,8 +55,7 @@ function singing(lineNo, segment){
   if(tune.conductor[lineNo][segment]){
     backPos = (100 - tune.conductor[lineNo][segment][0]);
   } else{
-    backPos = 0;
-    insertClock(line, duration);
+    0;
   }
   line.style.backgroundPosition =  `${backPos}% 0`;
   if (segment + 1 < segNo){
