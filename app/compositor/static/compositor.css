@@ -64,7 +64,7 @@ body {
 
 .line {
   position: relative;
-  display: flex;
+  display: inline-block;
   flex-wrap: wrap;
   padding-top: 1em;
 }

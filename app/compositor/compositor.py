@@ -70,14 +70,18 @@ def conduct():
   song_id = content.get('id', None)
   update = content.get('update', None)
   tune_log.log('conducting {} {}'.format(song_id, update) )
-  if update:
-    try:
-      song = Tune(song_id)
-      song.conduct(update)
-      cache.update_compositor(song)
-      db.session.close()
-    except Tune_error as e:
-      db.session.close()
-      return e.nice_error()
-  return json.dumps({'update': update})
-  return json.dumps({'success': True})
+  # if update:
+  #   try:
+  #     song = Tune(song_id)
+  #     song.conduct(update)
+  #     cache.update_compositor(song)
+  #     db.session.close()
+  #   except Tune_error as e:
+  #     db.session.close()
+  #     return e.nice_error()
+  # return json.dumps({'update': update})
+  return json.dumps({'success': True, 'song_id': song_id})
+
+@compositor.get('/rehersal/<int:song_id>')
+def rehersal(song_id):
+  return render_template('rehersal.html', song_id=song_id)

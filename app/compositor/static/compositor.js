@@ -134,7 +134,9 @@ function send(){
     if(res.cause){
       let txt = `args => ${res.args} \n couse => ${res.cause} \n traceback => ${res.traceback}`
       alert(txt);
-    }   
+    } else if(res.song_id){
+      window.open(`rehersal/${res.song_id}`);
+    }
   })
 }
 

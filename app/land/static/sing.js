@@ -83,10 +83,51 @@ function insertClock(line, duration){
 
 music.onplay = function(){
   is_singing = true;
-  singing(0, 0);
+  if(music.currentTime > 0){
+    console.log('not fresh');
+    let pos = findPos();
+    console.log('pos', pos);
+    singing(pos[0], pos[1]);
+  } else{
+    singing(0, 0);
+  }  
 }
 
 music.onpause = () => is_singing = false;
+
+music.onseeking = function(){
+  findPos();
+}
+
+function findPos(){
+  var pos;
+  let t = music.currentTime;
+  for (let i = 0; i < tune.conductor.length; i++){
+    if(tune.conductor[i].length > 0){
+      if(parseFloat(tune.conductor[i][tune.conductor[i].length -1][1]) > t){
+        for(let j = 0; j < tune.conductor[i].length; j++){
+          if(tune.conductor[i][j][1] > t){
+            pos = [i, j];
+            break;
+          }
+        }
+        break;
+      }
+    }
+  }
+  for (let i=0; i<tune.conductor.length; i++){
+    let line = document.getElementById(`l${i}`);
+    if(i < pos[0]){
+      line.style.backgroundPosition =  '0%'; 
+    } else if(i == pos[0]){
+      let backPos = (100 - tune.conductor[pos[0]][pos[1]][0]);
+      line.style.backgroundPosition =  `${backPos}% 0`;
+    } else if(i > pos[0]){
+      line.style.backgroundPosition =  '100%';
+    }
+  }
+  return pos;
+}
 
 function fetchPost(address, message){
   return fetch(address,{
