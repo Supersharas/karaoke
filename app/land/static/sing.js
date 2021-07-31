@@ -34,22 +34,24 @@ function sing(e){
 function prepareWorkdesk(tune){
   var text = tune.lyrics.split("\n")
   for(i=0;i<text.length;i++){
+    let holder = document.createElement('div');
     let d = document.createElement('div');
     d.id = `l${i}`;
     d.classList.add('line');
     d.innerText = text[i];
-    document.getElementById('tune').append(d);
+    holder.append(d);
+    document.getElementById('tune').append(holder);
   }
   //singing(0,0);
 }
 
 function singing(lineNo, segment){
-  let line = document.getElementById(`l${lineNo}`);
+  var line = document.getElementById(`l${lineNo}`);
   if(segment > 0){
     var duration = (tune.conductor[lineNo][segment][1] - (music.currentTime + 0.5)) * 1000;
     console.log('dyration', duration);
   } else{
-    let duration = 0;
+    var duration = 0;
   }
   let segNo = tune.conductor[lineNo].length;
   line.style.transition = `background-position ${duration}ms linear`;
@@ -57,6 +59,7 @@ function singing(lineNo, segment){
     backPos = (100 - tune.conductor[lineNo][segment][0]);
   } else{
     backPos = 0;
+    console.log('line-duration', line, duration);
     insertClock(line, duration);
   }
   line.style.backgroundPosition =  `${backPos}% 0`;
@@ -76,6 +79,7 @@ function singing(lineNo, segment){
 }
 
 function insertClock(line, duration){
+  console.log('line, duration');
   var clock = document.getElementById('clock');
   clock.innerText = duration.toString();
   line.append(clock);

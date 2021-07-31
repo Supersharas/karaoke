@@ -38,7 +38,9 @@ def time_printer(tot_sec):
 class Song(db.Model):
   __tablename__ = 'songs'
   id = db.Column(db.Integer, primary_key=True)
-  name = db.Column(db.String())
+  title = db.Column(db.String())
+  artist = db.Column(db.String())
+  image = db.Column(db.String())
   date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
   audio = db.Column(db.String())
   #score = db.Column(db.Float)
@@ -64,130 +66,47 @@ class Song(db.Model):
   def format(self):
     return {
       'id': self.id,
-      'name': self.name,
+      'title': self.title,
+      'artist': self.artist,
+      'image': self.image,
       'date': str(self.date.date()),
       'audio': self.audio,
       'text': self.text,
       'conductor': self.conductor
     }
 
-# class Comment(db.Model):
-#   __tablename__ = 'comments'
-#   id = db.Column(db.Integer, primary_key=True)
-#   date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-#   name = db.Column(db.String(40))
-#   ip = db.Column(db.String(30))
-#   comment = db.Column(db.String(500))
-#   quiz_id = db.Column(db.Integer, db.ForeignKey('quizes.id',  onupdate="CASCADE", ondelete="CASCADE"))
+class Test(db.Model):
+  __tablename__ = 'tests'
+  id = db.Column(db.Integer, primary_key=True)
+  title = db.Column(db.String())
+  artist = db.Column(db.String())
+  image = db.Column(db.String())
+  date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+  audio = db.Column(db.String())
+  text = db.Column(db.String())
+  conductor  = db.Column(db.String())
 
-#   def insert(self):
-#     db.session.add(self)
-#     db.session.commit()
+  def insert(self):
+    db.session.add(self)
+    db.session.commit()
   
-#   def update(self):
-#     db.session.commit()
+  def update(self):
+    current_app.logger.info('updating')
+    db.session.commit()
 
-#   def delete(self):
-#     db.session.delete(self)
-#     db.session.commit()
+  def delete(self):
+    db.session.delete(self)
+    db.session.commit()
 
-#   def format(self):
-#     return {
-#       'id': self.id,
-#       'date': str(self.date),
-#       'comment': self.comments,
-#       'ip': self.ip,
-#       'name': self.name,
-#       'quiz_id': self.quiz_id
-#     }
-
-# class Contact(db.Model):
-#   __tablename__ = 'contacts'
-#   id = db.Column(db.Integer, primary_key=True)
-#   date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
-#   name = db.Column(db.String(40))
-#   email = db.Column(db.String(40))
-#   subject = db.Column(db.String(200))
-#   ip = db.Column(db.String(30))
-#   message = db.Column(db.String(1000))
-#   replied = db.Column(db.Boolean, default=False)
-
-#   def insert(self):
-#     db.session.add(self)
-#     db.session.commit()
-  
-#   def update(self):
-#     db.session.commit()
-
-#   def delete(self):
-#     db.session.delete(self)
-#     db.session.commit()
-
-#   def format(self):
-#     return {
-#       'id': self.id,
-#       'date': str(self.date.strftime("%c")),
-#       'subject': self.subject,
-#       'ip': self.ip,
-#       'name': self.name,
-#       'message': self.message,
-#       'email': self.email,
-#       'replied': self.replied
-#     }
-
-# class Question(db.Model):
-#   __tablename__ = 'questions'
-#   id = db.Column(db.Integer, primary_key=True)
-#   question_type = db.Column(db.String(20), default='question')
-#   description = db.Column(db.String(1000))
-#   pic = db.Column(db.String(50))
-#   answers = db.Column(db.JSON, nullable=False)
-
-#   def insert(self):
-#     db.session.add(self)
-#     db.session.commit()
-  
-#   def update(self):
-#     db.session.commit()
-
-#   def delete(self):
-#     db.session.delete(self)
-#     db.session.commit()
-
-#   def format(self):
-#     return {
-#       'id': self.id,
-#       'question_type': self.question_type,
-#       'description': self.description,
-#       'pic': self.pic,
-#       'problem': self.problem
-#     }
-
-# class Account(db.Model):
-#   __tablename__ = 'accounts'
-#   id = db.Column(db.Integer, primary_key=True)
-#   name = db.Column(db.String(50))
-#   so_secret = db.Column(db.String(150))
-#   token = db.Column(db.String(50))
-#   date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-
-#   def insert(self):
-#     db.session.add(self)
-#     db.session.commit()
-  
-#   def update(self):
-#     db.session.commit()
-
-#   def delete(self):
-#     db.session.delete(self)
-#     db.session.commit()
-
-#   def format(self):
-#     return {
-#       'id': self.id,
-#       'name': self.name,
-#       'secret': self.secret,
-#       'token': self.token
-#     }
-
+  def format(self):
+    return {
+      'id': self.id,
+      'title': self.title,
+      'artist': self.artist,
+      'image': self.image,
+      'date': str(self.date.date()),
+      'audio': self.audio,
+      'text': self.text,
+      'conductor': self.conductor
+    }
 

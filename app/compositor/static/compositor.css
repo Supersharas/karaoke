@@ -63,10 +63,14 @@ body {
 }
 
 .line {
+  display: flex;
   position: relative;
-  display: inline-block;
   flex-wrap: wrap;
   padding-top: 1em;
+}
+
+.rehersalLine {
+  display: inline-block;
 }
 
 .line button{

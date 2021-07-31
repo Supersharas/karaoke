@@ -89,7 +89,6 @@ function startWork(e) {
 }
 
 music.onplay = function(){
-  //singing(0, 0);
   console.log('Playing');
   clockInterval = setInterval(clock, 100);
 }
@@ -114,8 +113,6 @@ function findSong(){
     if(res.lyrics){
       tune = res;
       console.log('tune', tune);
-      // TO DO
-      //tune.conductor = [];
       prepareWorkdesk(tune);
       document.getElementById('editS').style.display = 'none';
     }   
@@ -126,7 +123,7 @@ function send(){
   if(typeof tune.conductor !== 'string'){
     tune.conductor = tune.conductor.join('*');
   }
-  tune.name = 'I dont cnow';
+  tune.title = 'I dont cnow';
   let msg = {'id': tune.id, 'update': tune};
   console.log('msg', msg);
   fetchPost('/compositor/conduct', msg).then(function(res){
@@ -145,7 +142,6 @@ function fetchPost(address, message){
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
     },
     body: JSON.stringify(message)
   }).then(response => response.json()).then(function(response){
@@ -170,26 +166,4 @@ function disclose(node){
   }
 }
 
-// function singing(lineNo, segment){
-// 	// lines[lineNo].classList.add('sing');
-//   let line = lines[lineNo];
-//   let duration = conductor[lineNo][segment][1]
-//   let segNo = conductor[lineNo].length
-//   // let computed = window.getComputedStyle(line)
-//   line.style.transition = `background-position ${duration}ms linear`;
-//   backPos = 100 - conductor[lineNo][segment][0]
-//   line.style.backgroundPosition =  `${backPos}% 0`;
-// 	console.log('lineNo, l, duration', lineNo, l, duration);
-// 	console.log('singing', lines[lineNo]);
-//   if (segment + 1 < segNo){
-// 		setTimeout(function(){
-// 			singing(lineNo, segment + 1)
-// 		}, duration);
-// 	}
-// 	if (lineNo + 1 < l){
-// 		setTimeout(function(){
-// 			singing(lineNo + 1, 0)
-// 		}, duration);
-// 	}
-// }
 

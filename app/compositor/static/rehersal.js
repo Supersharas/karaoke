@@ -4,7 +4,7 @@ var music = document.getElementById('music');
 
 function sing(songId){
   let msg = {'id': songId};
-  fetchPost('/get_song', msg).then(function(res){
+  fetchPost('/compositor/get', msg).then(function(res){
     if(res.lyrics){
       console.log('res', res);
       tune = res;
@@ -36,6 +36,7 @@ function prepareWorkdesk(tune){
     let d = document.createElement('div');
     d.id = `l${i}`;
     d.classList.add('line');
+    d.classList.add('rehersalLine');
     //d.innerText = text[i];
     holder.append(d);
     document.getElementById('tune').append(holder);
@@ -55,12 +56,8 @@ function prepareWorkdesk(tune){
 
 function singing(lineNo, segment){
   let line = document.getElementById(`l${lineNo}`);
-  if(segment > 0){
-    var duration = (tune.conductor[lineNo][segment][1] - (music.currentTime + 0.5)) * 1000;
-    console.log('duration', duration);
-  } else{
-    let duration = 0;
-  }
+  var duration = (tune.conductor[lineNo][segment][1] - (music.currentTime + 0.5)) * 1000;
+  console.log('duration, musictime, cond', duration, music.currentTime, tune.conductor[lineNo][segment][1]);
   let segNo = tune.conductor[lineNo].length;
   line.style.transition = `background-position ${duration}ms linear`;
   if(tune.conductor[lineNo][segment]){
@@ -175,6 +172,32 @@ function findPos(){
     }
   }
   return pos;
+}
+
+function send(){
+  if(typeof tune.conductor !== 'string'){
+    for(let i=0; i<tune.conductor.length; i++){
+      var tempLine = ''
+      for(let j=0; j<tune.conductor[i].length; j++){
+        console.log('conductor line j', tune.conductor[i][j]);
+        tempLine += '+' + tune.conductor[i][j][0] + ',' + tune.conductor[i][j][1];
+      }
+      tune.conductor[i] = tempLine;
+    }
+    tune.conductor = tune.conductor.join('*');
+  }
+  tune.title = 'I dont know';
+  let msg = {'id': tune.id, 'update': tune};
+  console.log('msg', msg);
+  fetchPost('/compositor/conduct', msg).then(function(res){
+    console.log('res', res);
+    if(res.cause){
+      let txt = `args => ${res.args} \n couse => ${res.cause} \n traceback => ${res.traceback}`
+      alert(txt);
+    } else if(res.song_id){
+      console.log('massive success');
+    }
+  })
 }
 
 function fetchPost(address, message){

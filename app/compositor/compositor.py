@@ -13,6 +13,7 @@ compositor = Blueprint('compositor', __name__,
 		static_folder='static', static_url_path='/compositor')
 
 from app.classes.tune import Tune
+from app.classes.test import Tester
 from app.classes.tune_error import Tune_error, Silent_error
 from app.classes.cache import Cache
 from app.classes.loger import Tune_log
@@ -37,7 +38,7 @@ def new_song():
   audio = content.get('audio', None)
   lyrics = content.get('lyrics', None)
   try:
-    song = Tune(name, audio, lyrics)
+    song = Tester(name, audio, lyrics)
     cache.update_compositor(song.song)
   except Silent_error as e:
     current_app.logger.info(e.nice_error)
@@ -51,7 +52,7 @@ def get_song():
   content = json.loads(request.data)
   song_id = content.get('id', None)
   try:
-    song = Tune(song_id)
+    song = Tester(song_id)
     current_app.logger.info(song.song)
     cache.update_compositor(song)
   except Silent_error as e:
@@ -70,17 +71,16 @@ def conduct():
   song_id = content.get('id', None)
   update = content.get('update', None)
   tune_log.log('conducting {} {}'.format(song_id, update) )
-  # if update:
-  #   try:
-  #     song = Tune(song_id)
-  #     song.conduct(update)
-  #     cache.update_compositor(song)
-  #     db.session.close()
-  #   except Tune_error as e:
-  #     db.session.close()
-  #     return e.nice_error()
-  # return json.dumps({'update': update})
-  return json.dumps({'success': True, 'song_id': song_id})
+  if update:
+    try:
+      song = Tester(song_id)
+      song.conduct(update)
+      cache.update_compositor(song)
+      db.session.close()
+    except Tune_error as e:
+      db.session.close()
+      return e.nice_error()
+  return json.dumps({'update': update, 'song_id': song_id})
 
 @compositor.get('/rehersal/<int:song_id>')
 def rehersal(song_id):
