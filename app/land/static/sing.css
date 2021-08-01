@@ -68,6 +68,11 @@ body {
   min-height: 1em;
 }
 
+.rehersalLine {
+  display: inline-block;
+}
+
+
 #clock{
   visibility: hidden;
 }

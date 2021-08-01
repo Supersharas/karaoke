@@ -69,10 +69,6 @@ body {
   padding-top: 1em;
 }
 
-.rehersalLine {
-  display: inline-block;
-}
-
 .line button{
   position: absolute;
   right: -1em;

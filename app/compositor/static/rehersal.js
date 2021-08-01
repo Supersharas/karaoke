@@ -1,6 +1,6 @@
 var is_singing = false;
 var music = document.getElementById('music');
-//music.playbackRate = 0.2;
+var pos = [0,0];
 
 function sing(songId){
   let msg = {'id': songId};
@@ -30,6 +30,7 @@ function sing(songId){
 }
 
 function prepareWorkdesk(tune){
+  document.getElementById('tune').innerText = '';
   var text = tune.lyrics.split("\n")
   for(i=0;i<text.length;i++){
     let holder = document.createElement('div');
@@ -37,6 +38,11 @@ function prepareWorkdesk(tune){
     d.id = `l${i}`;
     d.classList.add('line');
     d.classList.add('rehersalLine');
+    if(text[i] != ''){
+      let firstChar = document.createElement('small');
+      firstChar.innerText = '- ';
+      d.append(firstChar);
+    } 
     //d.innerText = text[i];
     holder.append(d);
     document.getElementById('tune').append(holder);
@@ -56,14 +62,18 @@ function prepareWorkdesk(tune){
 
 function singing(lineNo, segment){
   let line = document.getElementById(`l${lineNo}`);
-  var duration = (tune.conductor[lineNo][segment][1] - (music.currentTime + 0.5)) * 1000;
-  console.log('duration, musictime, cond', duration, music.currentTime, tune.conductor[lineNo][segment][1]);
+  if(tune.conductor[lineNo].length > 0){
+    var duration = (tune.conductor[lineNo][segment][1] - music.currentTime - 0.4) * 1000;
+  } else{
+    var duration = 0;
+  }
+  
   let segNo = tune.conductor[lineNo].length;
   line.style.transition = `background-position ${duration}ms linear`;
   if(tune.conductor[lineNo][segment]){
-    backPos = (100 - tune.conductor[lineNo][segment][0]);
+    var backPos = (100 - tune.conductor[lineNo][segment][0]);
   } else{
-    0;
+    var backPos = 0;
   }
   line.style.backgroundPosition =  `${backPos}% 0`;
   if (segment + 1 < segNo){
@@ -99,7 +109,7 @@ music.onplay = function(){
       prevBub.remove();
     }
   } else{
-    singing(0, 0);
+    singing(pos[0], pos[1]);
   }  
 }
 
@@ -143,12 +153,9 @@ function adjustment(event){
 }
 
 function findPos(){
-  var pos;
   let t = music.currentTime;
   for (let i = 0; i < tune.conductor.length; i++){
     if(tune.conductor[i].length > 0){
-      console.log('i', i, parseFloat(tune.conductor[i][tune.conductor[i].length -1][1]), t);
-      console.log('bool', parseFloat(tune.conductor[i][tune.conductor[i].length -1][1]) > t)
       if(parseFloat(tune.conductor[i][tune.conductor[i].length -1][1]) > t){
         for(let j = 0; j < tune.conductor[i].length; j++){
           if(tune.conductor[i][j][1] > t){
@@ -174,7 +181,7 @@ function findPos(){
   return pos;
 }
 
-function send(){
+function prepareMsg(){
   if(typeof tune.conductor !== 'string'){
     for(let i=0; i<tune.conductor.length; i++){
       var tempLine = ''
@@ -186,7 +193,11 @@ function send(){
     }
     tune.conductor = tune.conductor.join('*');
   }
-  tune.title = 'I dont know';
+}
+
+function send(){
+  prepareMsg();
+  tune.title = 'Counting Stars'
   let msg = {'id': tune.id, 'update': tune};
   console.log('msg', msg);
   fetchPost('/compositor/conduct', msg).then(function(res){
@@ -196,6 +207,24 @@ function send(){
       alert(txt);
     } else if(res.song_id){
       console.log('massive success');
+      sing(songId);
+    }
+  })
+}
+
+function convert(){
+  prepareMsg();
+  console.log('converting', tune.conductor);
+  let msg = {'id': tune.id};
+  console.log('msg', msg);
+  fetchPost('/compositor/convert', msg).then(function(res){
+    console.log('res', res);
+    if(res.cause){
+      let txt = `args => ${res.args} \n couse => ${res.cause} \n traceback => ${res.traceback}`
+      alert(txt);
+    } else if(res.song_id){
+      console.log('massive success');
+      sing(songId);
     }
   })
 }

@@ -82,6 +82,23 @@ def conduct():
       return e.nice_error()
   return json.dumps({'update': update, 'song_id': song_id})
 
+@compositor.post('/convert')
+def convert():
+  content = json.loads(request.data)
+  song_id = content.get('id', None)
+  update = content.get('update', None)
+  tune_log.log('conducting {} {}'.format(song_id, update) )
+  if update:
+    try:
+      song = Tester(song_id)
+      song.convert(update)
+      cache.update_compositor(song)
+      db.session.close()
+    except Tune_error as e:
+      db.session.close()
+      return e.nice_error()
+  return json.dumps({'converted': update, 'song_id': song_id})
+
 @compositor.get('/rehersal/<int:song_id>')
 def rehersal(song_id):
   return render_template('rehersal.html', song_id=song_id)

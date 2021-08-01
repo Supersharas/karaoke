@@ -52,7 +52,8 @@ class Tester:
 
   def convert(self):
     try:
-      Song(title=self.song.title, audio=self.song.audio, text=self.song.lyrics)
+      converted = Song(title=self.song.title, audio=self.song.audio, text=self.song.lyrics)
+      converted.insert()
     except Exception as e:
       raise Tune_error('Test => Database error while converting.') from e
     return json.dumps({'success': self.__str__()})
