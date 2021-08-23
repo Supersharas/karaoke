@@ -54,6 +54,7 @@ body {
 
 .line {
   position: relative;
+  display: inline-block;
   font-size: 2em;
   font-weight: 800;
   color: royalblue;
@@ -69,7 +70,7 @@ body {
 }
 
 .rehersalLine {
-  display: inline-block;
+  
 }
 
 

@@ -86,18 +86,19 @@ def conduct():
 def convert():
   content = json.loads(request.data)
   song_id = content.get('id', None)
-  update = content.get('update', None)
-  tune_log.log('conducting {} {}'.format(song_id, update) )
-  if update:
+  tune_log.log('converting {}'.format(song_id) )
+  if song_id:
     try:
       song = Tester(song_id)
-      song.convert(update)
+      song.convert()
       cache.update_compositor(song)
       db.session.close()
     except Tune_error as e:
       db.session.close()
       return e.nice_error()
-  return json.dumps({'converted': update, 'song_id': song_id})
+  else:
+    return json.dumps({'converted': False, 'song_id': song_id})
+  return json.dumps({'converted': True, 'song_id': song_id})
 
 @compositor.get('/rehersal/<int:song_id>')
 def rehersal(song_id):

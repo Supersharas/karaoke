@@ -19,7 +19,14 @@ class Tune:
         song = Song(title=name, audio=audio, text=lyrics)
         song.insert()
       except Exception as e:
-        raise Tune_error(' Initializing Object') from e       
+        raise Tune_error(' Initializing Object') from e 
+    elif len(args) > 3:
+      [name, audio, lyrics, conductor] = args
+      try:
+        song = Song(title=name, audio=audio, text=lyrics, conductor=conductor)
+        song.insert()
+      except Exception as e:
+        raise Tune_error(' Initializing Object') from e      
     else:
       try: 
         song = Song.query.filter_by(id=args[0]).first()

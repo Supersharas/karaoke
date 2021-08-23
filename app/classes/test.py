@@ -13,6 +13,7 @@ class Tester:
 
   def __init__(self, *args):
     helper = 'Test =>unknown error with arguments: ' + str(args)
+    tune_log.log('initializing')
     if len(args) > 1:
       [name, audio, lyrics] = args
       try:
@@ -44,15 +45,17 @@ class Tester:
       self.song.conductor = notes['conductor']
       self.song.title = notes['title']
       self.song.audio = notes['audio']
-      self.song.lyrics = notes['lyrics'] 
+      self.song.text = notes['lyrics'] 
       self.song.update()
     except Exception as e:
       raise Tune_error('Test => Database error while conducting.') from e
     return json.dumps({'success': self.__str__()})
 
   def convert(self):
+    tune_log.log('converting')
     try:
-      converted = Song(title=self.song.title, audio=self.song.audio, text=self.song.lyrics)
+      converted = Song(title=self.song.title, audio=self.song.audio, text=self.song.text, conductor=self.song.conductor)
+      tune_log.log('converting {}'.format(self.song.format()))
       converted.insert()
     except Exception as e:
       raise Tune_error('Test => Database error while converting.') from e
