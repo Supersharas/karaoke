@@ -137,6 +137,10 @@ function send(){
   })
 }
 
+function reherse(){
+  window.open(`rehersal/${tune.id}`);
+}
+
 function fetchPost(address, message){
   return fetch(address,{
     method: 'POST',

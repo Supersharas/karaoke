@@ -1,6 +1,8 @@
 
 var is_singing = false;
 
+var lineHeight;
+
 var music = document.getElementById('music');
 //music.playbackRate = 0.2;
 
@@ -38,18 +40,35 @@ function prepareWorkdesk(tune){
     let d = document.createElement('div');
     d.id = `l${i}`;
     d.classList.add('line');
-    d.innerText = text[i];
+    if(text[i] != ''){
+      d.innerText = '- ' + text[i];
+    } else{
+      d.innerText = text[i];
+    }
     holder.append(d);
     document.getElementById('tune').append(holder);
   }
   //singing(0,0);
+  console.log('l0', document.getElementById('l0'));
+  lineHeight = document.getElementById('l0').clientHeight;
 }
+
+function chaseLine(line){
+  //var tuneDisplay = document.getElementById('tune');
+  //var topLine = document.getElementById('topLine');
+  //topLine.append(line.parentNode);
+  line.style.top = '-100px';
+  //topHeight = topHeight - 100;
+  //console.log('string', topHeight.toString() + 'px');
+  //tuneDisplay.style.top = topHeight.toString() + 'px';
+}
+var topHeight = 0;
 
 function singing(lineNo, segment){
   var line = document.getElementById(`l${lineNo}`);
+  
   if(segment > 0){
     var duration = (tune.conductor[lineNo][segment][1] - (music.currentTime + 0.5)) * 1000;
-    console.log('dyration', duration);
   } else{
     var duration = 0;
   }
@@ -60,7 +79,7 @@ function singing(lineNo, segment){
   } else{
     backPos = 0;
     console.log('line-duration', line, duration);
-    insertClock(line, duration);
+    //insertClock(line, duration);
   }
   line.style.backgroundPosition =  `${backPos}% 0`;
   if (segment + 1 < segNo){
@@ -72,18 +91,25 @@ function singing(lineNo, segment){
   } else if (lineNo + 1 < tune.conductor.length){
     if(is_singing){
       setTimeout(function(){
+        chaseLine(line);
+        var tuneDisplay = document.getElementById('tune');
+        //tuneDisplay.style.transform = 'translateY(-1000px)';
+        //tuneDisplay.style.transition = duration.toString() + 's';
+        tuneDisplay.style.transition = 'top ' + duration.toString() + 'ms';
+        topHeight -= lineHeight;
+        tuneDisplay.style.top = topHeight.toString() + 'px';
         singing(lineNo + 1, 0)
       }, duration);
     }
   }
 }
 
-function insertClock(line, duration){
-  console.log('line, duration');
-  var clock = document.getElementById('clock');
-  clock.innerText = duration.toString();
-  line.append(clock);
-}
+// function insertClock(line, duration){
+//   console.log('line, duration');
+//   var clock = document.getElementById('clock');
+//   clock.innerText = duration.toString();
+//   line.append(clock);
+// }
 
 music.onplay = function(){
   is_singing = true;

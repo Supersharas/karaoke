@@ -52,6 +52,11 @@ body {
   display: inline-block;
 }
 
+#tune {
+  position: relative;
+  padding-top: 25em;
+}
+
 .line {
   position: relative;
   display: inline-block;
@@ -68,11 +73,6 @@ body {
   text-decoration: none;
   min-height: 1em;
 }
-
-.rehersalLine {
-  
-}
-
 
 #clock{
   visibility: hidden;
