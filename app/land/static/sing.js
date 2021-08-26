@@ -51,9 +51,11 @@ function prepareWorkdesk(tune){
   //singing(0,0);
   console.log('l0', document.getElementById('l0'));
   lineHeight = document.getElementById('l0').clientHeight;
+  chaseLine(0);
 }
 
-function chaseLine(line){
+function chaseLine(lineNo){
+  var line = document.getElementById(`l${lineNo}`);
   //var tuneDisplay = document.getElementById('tune');
   //var topLine = document.getElementById('topLine');
   //topLine.append(line.parentNode);
@@ -91,11 +93,18 @@ function singing(lineNo, segment){
   } else if (lineNo + 1 < tune.conductor.length){
     if(is_singing){
       setTimeout(function(){
-        chaseLine(line);
+        chaseLine(lineNo + 1);
         var tuneDisplay = document.getElementById('tune');
         //tuneDisplay.style.transform = 'translateY(-1000px)';
         //tuneDisplay.style.transition = duration.toString() + 's';
-        tuneDisplay.style.transition = 'top ' + duration.toString() + 'ms';
+        //tuneDisplay.style.transition = `top ${duration}ms linear`;
+        if(tune.conductor[lineNo + 1].length != 0){
+          var moveDuration = (tune.conductor[lineNo + 1][tune.conductor[lineNo + 1].length - 1][1] - (music.currentTime + 0.5)) * 1000;
+        } else{
+          var moveDuration = 1;
+        }
+        
+        tuneDisplay.style.transitionDuration = moveDuration.toString() + 'ms';
         topHeight -= lineHeight;
         tuneDisplay.style.top = topHeight.toString() + 'px';
         singing(lineNo + 1, 0)
@@ -120,6 +129,11 @@ music.onplay = function(){
     singing(pos[0], pos[1]);
   } else{
     singing(0, 0);
+    var tuneDisplay = document.getElementById('tune');
+    var moveDuration = (tune.conductor[0][tune.conductor[0].length - 1][1] - (music.currentTime + 0.5)) * 1000;
+    tuneDisplay.style.transitionDuration = moveDuration.toString() + 'ms';
+    topHeight -= lineHeight;
+    tuneDisplay.style.top = topHeight.toString() + 'px';
   }  
 }
 
