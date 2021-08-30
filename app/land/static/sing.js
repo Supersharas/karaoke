@@ -120,6 +120,7 @@ function singing(lineNo, segment){
 //   line.append(clock);
 // }
 
+
 music.onplay = function(){
   is_singing = true;
   if(music.currentTime > 0){
@@ -128,6 +129,8 @@ music.onplay = function(){
     console.log('pos', pos);
     singing(pos[0], pos[1]);
   } else{
+    topHeight *= -1;
+    document.getElementById('tune').style.top = `${topHeight}px`;
     singing(0, 0);
     var tuneDisplay = document.getElementById('tune');
     var moveDuration = (tune.conductor[0][tune.conductor[0].length - 1][1] - (music.currentTime + 0.5)) * 1000;
