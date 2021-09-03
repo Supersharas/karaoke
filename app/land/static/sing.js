@@ -51,18 +51,29 @@ function prepareWorkdesk(tune){
   //singing(0,0);
   console.log('l0', document.getElementById('l0'));
   lineHeight = document.getElementById('l0').clientHeight;
-  chaseLine(0);
+  var line = document.getElementById(`l0`);
+  line.style.top = '-100px';
+  line.style.transition = `top 600ms linear`;
 }
 
 function chaseLine(lineNo){
-  var line = document.getElementById(`l${lineNo}`);
-  //var tuneDisplay = document.getElementById('tune');
-  //var topLine = document.getElementById('topLine');
-  //topLine.append(line.parentNode);
-  line.style.top = '-100px';
-  //topHeight = topHeight - 100;
-  //console.log('string', topHeight.toString() + 'px');
-  //tuneDisplay.style.top = topHeight.toString() + 'px';
+  if(tune.conductor[lineNo].length != 0){
+    var moveDuration = (tune.conductor[lineNo][tune.conductor[lineNo].length - 1][1] - (music.currentTime + 0.5)) * 1000;
+    //var line = document.getElementById(`l${lineNo}`);
+    if(tune.conductor[lineNo + 1].length == 0){
+      var nextLine = document.getElementById(`l${lineNo +  2}`);
+    } else{
+      var nextLine = document.getElementById(`l${lineNo +  1}`);
+    }
+    
+    nextLine.style.transition = `top ${moveDuration}ms linear`;
+    nextLine.style.top = '-100px';
+
+    var tuneDisplay = document.getElementById('tune');
+    tuneDisplay.style.transitionDuration = moveDuration.toString() + 'ms';
+    topHeight -= lineHeight;
+    tuneDisplay.style.top = topHeight.toString() + 'px'; 
+  }   
 }
 var topHeight = 0;
 
@@ -94,19 +105,6 @@ function singing(lineNo, segment){
     if(is_singing){
       setTimeout(function(){
         chaseLine(lineNo + 1);
-        var tuneDisplay = document.getElementById('tune');
-        //tuneDisplay.style.transform = 'translateY(-1000px)';
-        //tuneDisplay.style.transition = duration.toString() + 's';
-        //tuneDisplay.style.transition = `top ${duration}ms linear`;
-        if(tune.conductor[lineNo + 1].length != 0){
-          var moveDuration = (tune.conductor[lineNo + 1][tune.conductor[lineNo + 1].length - 1][1] - (music.currentTime + 0.5)) * 1000;
-        } else{
-          var moveDuration = 1;
-        }
-        
-        tuneDisplay.style.transitionDuration = moveDuration.toString() + 'ms';
-        topHeight -= lineHeight;
-        tuneDisplay.style.top = topHeight.toString() + 'px';
         singing(lineNo + 1, 0)
       }, duration);
     }
@@ -120,7 +118,6 @@ function singing(lineNo, segment){
 //   line.append(clock);
 // }
 
-
 music.onplay = function(){
   is_singing = true;
   if(music.currentTime > 0){
@@ -129,14 +126,13 @@ music.onplay = function(){
     console.log('pos', pos);
     singing(pos[0], pos[1]);
   } else{
-    topHeight *= -1;
-    document.getElementById('tune').style.top = `${topHeight}px`;
     singing(0, 0);
     var tuneDisplay = document.getElementById('tune');
     var moveDuration = (tune.conductor[0][tune.conductor[0].length - 1][1] - (music.currentTime + 0.5)) * 1000;
     tuneDisplay.style.transitionDuration = moveDuration.toString() + 'ms';
-    topHeight -= lineHeight;
+    topHeight = 0;
     tuneDisplay.style.top = topHeight.toString() + 'px';
+    chaseLine(0, moveDuration);
   }  
 }
 
@@ -155,6 +151,12 @@ function findPos(){
         for(let j = 0; j < tune.conductor[i].length; j++){
           if(tune.conductor[i][j][1] > t){
             pos = [i, j];
+            console.log('pos', pos);
+            // Setting clientHeight
+            topHeight = lineHeight * -i;
+            var tuneDisplay = document.getElementById('tune');
+            tuneDisplay.style.transitionDuration = '0s';
+            tuneDisplay.style.top = topHeight.toString() + 'px';
             break;
           }
         }
@@ -164,13 +166,18 @@ function findPos(){
   }
   for (let i=0; i<tune.conductor.length; i++){
     let line = document.getElementById(`l${i}`);
+    line.style.transition = `background-position 0ms linear`;
+    console.log('pos latter', pos);
     if(i < pos[0]){
       line.style.backgroundPosition =  '0%'; 
+      line.style.top = '-100px';
     } else if(i == pos[0]){
       let backPos = (100 - tune.conductor[pos[0]][pos[1]][0]);
       line.style.backgroundPosition =  `${backPos}% 0`;
+      line.style.top = '-100px';
     } else if(i > pos[0]){
       line.style.backgroundPosition =  '100%';
+      line.style.top = '0px';
     }
   }
   return pos;

@@ -63,6 +63,7 @@ body {
 .line {
   position: relative;
   display: inline-block;
+  top: 0;
   font-size: 2em;
   font-weight: 800;
   color: royalblue;
