@@ -43,6 +43,16 @@ function prepareWorkdesk(tune){
     d.id = `l${i}`;
     d.classList.add('line');
     document.getElementById('workdesk').append(d);
+    let firstChar = document.createElement('div');
+    firstChar.innerText = '+';
+    firstChar.classList.add('char');
+    firstChar.onmouseleave = function(){
+        if(composing){
+          firstChar.classList.add('clicked');
+          spell(-1, parseInt(this.parentElement.id.slice(1)));
+        }  
+      }
+      d.append(firstChar);
     for(j=0;j<text[i].length;j++){
       let char = document.createElement('div');
       char.innerText = text[i][j];
