@@ -2,11 +2,14 @@
 var is_singing = false;
 
 var lineHeight;
+var topHeight = 0;
 const delay = 0.2
+var allLines = document.getElementsByClassName('line');
 
 var music = document.getElementById('music');
-//music.playbackRate = 0.2;
 
+
+// << Retreves the song and decodes conductor >>
 function sing(e){
   let msg = {'id': e.id};
   fetchPost('/get_song', msg).then(function(res){
@@ -34,10 +37,12 @@ function sing(e){
   })
 }
 
+// << Renders song text and lifts first line >>
 function prepareWorkdesk(tune){
   var text = tune.lyrics.split("\n")
   for(i=0;i<text.length;i++){
     let holder = document.createElement('div');
+    holder.classList.add('lineHolder');
     let d = document.createElement('div');
     d.id = `l${i}`;
     d.classList.add('line');
@@ -51,41 +56,49 @@ function prepareWorkdesk(tune){
     document.getElementById('tune').append(holder);
   }
   //singing(0,0);
-  console.log('l0', document.getElementById('l0'));
   lineHeight = document.getElementById('l0').clientHeight;
   var line = document.getElementById(`l0`);
-  line.style.top = '-100px';
-  line.style.transition = `top 600ms linear`;
+  line.parentElement.style.top = '-100px';
+  line.parentElement.style.transition = `top 600ms linear`;
 }
 
+
+//<< Moves subsequent lines to singing level. >>
 function chaseLine(lineNo){
-  //if(tune.conductor[lineNo].length != 0){
-    //var moveDuration = (tune.conductor[lineNo][tune.conductor[lineNo].length - 1][1] - (music.currentTime + 0.5)) * 1000;
-    
-    //var line = document.getElementById(`l${lineNo}`);
+  console.log('chasingLine', lineNo);
   if(tune.conductor[lineNo + 1].length == 0){
-    var nextLine = document.getElementById(`l${lineNo +  2}`);
+    //var nextLine = document.getElementById(`l${lineNo +  2}`);
+    var toLift = lineNo + 2;
     var moveDuration = (tune.conductor[lineNo + 2][0][1] - (music.currentTime + delay)) * 1000
-    console.log('line, line + 2, duration', lineNo, lineNo + 2, moveDuration);
-    console.log('duration', lineNo, moveDuration);
   } else{
-    var nextLine = document.getElementById(`l${lineNo +  1}`);
+    var toLift = lineNo + 1;
+    //var nextLine = document.getElementById(`l${lineNo +  1}`);
     var moveDuration = (tune.conductor[lineNo + 1][0][1] - (music.currentTime + delay)) * 1000;
-    console.log('duration', lineNo, moveDuration);
   }
   
-  nextLine.style.transition = `top ${moveDuration}ms linear`;
-  nextLine.style.top = '-100px';
+  //nextLine.style.transition = `top ${moveDuration}ms linear`;
+  //nextLine.style.top = '-100px';
 
-  var tuneDisplay = document.getElementById('tune');
-  tuneDisplay.style.transitionDuration = moveDuration.toString() + 'ms';
-  topHeight -= lineHeight;
-  tuneDisplay.style.top = topHeight.toString() + 'px'; 
-  //}   
+  // var tuneDisplay = document.getElementById('tune');
+  // tuneDisplay.style.transitionDuration = moveDuration.toString() + 'ms';
+  // topHeight -= lineHeight;
+  // tuneDisplay.style.top = topHeight.toString() + 'px';
+  topHeight -= lineHeight; 
+  for(i=0; i < allLines.length; i++){
+    allLines[i].parentElement.style.transition = `top ${moveDuration}ms linear`;
+    if(allLines[i].id.slice(1) <= toLift){
+      allLines[i].parentElement.style.top = (topHeight - 100).toString() + 'px';
+      //console.log('haha', allLines[i].style);
+    } else{
+      allLines[i].parentElement.style.top = topHeight.toString() + 'px';
+    }    
+  }
 }
-var topHeight = 0;
 
+
+// << Colors text acording to moment in time of singing. >>
 function singing(lineNo, segment){
+  console.log('singing');
   var line = document.getElementById(`l${lineNo}`);
   
   if(segment > 0){
@@ -95,12 +108,11 @@ function singing(lineNo, segment){
   }
   let segNo = tune.conductor[lineNo].length;
   line.style.transition = `background-position ${duration}ms linear`;
+  console.log('line', duration, line.style.transition);
   if(tune.conductor[lineNo][segment]){
     backPos = (100 - tune.conductor[lineNo][segment][0]);
   } else{
     backPos = 0;
-    console.log('line-duration', line, duration);
-    //insertClock(line, duration);
   }
   line.style.backgroundPosition =  `${backPos}% 0`;
   if (segment + 1 < segNo){
@@ -132,6 +144,7 @@ function singing(lineNo, segment){
 //   line.append(clock);
 // }
 
+// << Starts karaoke. >>
 music.onplay = function(){
   is_singing = true;
   if(music.currentTime > 0){
@@ -141,21 +154,18 @@ music.onplay = function(){
     singing(pos[0], pos[1]);
   } else{
     singing(0, 0);
-    var tuneDisplay = document.getElementById('tune');
-    var moveDuration = (tune.conductor[0][tune.conductor[0].length - 1][1] - (music.currentTime + delay)) * 1000;
-    tuneDisplay.style.transitionDuration = moveDuration.toString() + 'ms';
-    topHeight = 0;
-    tuneDisplay.style.top = topHeight.toString() + 'px';
-    chaseLine(0, moveDuration);
+    chaseLine(0);
   }  
 }
 
 music.onpause = () => is_singing = false;
 
+// << Sets color while seeking.>>
 music.onseeking = function(){
   findPos();
 }
 
+// << Finds line and coloring position in time. >>
 function findPos(){
   var pos;
   let t = music.currentTime;
@@ -184,19 +194,20 @@ function findPos(){
     console.log('pos latter', pos);
     if(i < pos[0]){
       line.style.backgroundPosition =  '0%'; 
-      line.style.top = '-100px';
+      //line.style.top = '-100px';
     } else if(i == pos[0]){
       let backPos = (100 - tune.conductor[pos[0]][pos[1]][0]);
       line.style.backgroundPosition =  `${backPos}% 0`;
-      line.style.top = '-100px';
+      //line.style.top = '-100px';
     } else if(i > pos[0]){
       line.style.backgroundPosition =  '100%';
-      line.style.top = '0px';
+      //line.style.top = '0px';
     }
   }
   return pos;
 }
 
+// << Helper function to fetch song. >>
 function fetchPost(address, message){
   return fetch(address,{
     method: 'POST',
