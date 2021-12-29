@@ -56,7 +56,7 @@ function prepareWorkdesk(tune){
     document.getElementById('tune').append(holder);
   }
   //singing(0,0);
-  lineHeight = document.getElementById('l0').clientHeight;
+  lineHeight = document.getElementById('l0').parentElement.offsetHeight;
   var line = document.getElementById(`l0`);
   line.parentElement.style.top = '-100px';
   line.parentElement.style.transition = `top 600ms linear`;
